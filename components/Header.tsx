@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import DemoModal from "./DemoModal";
+import Image from "next/image";
 
 const navLinks = [
   { href: "#services", label: "Nos solutions" },
@@ -34,7 +35,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
             <div className="w-9 h-9 bg-blue-700 rounded-lg flex items-center justify-center flex-shrink-0">
-              <svg
+              {/* <svg
                 className="w-5 h-5 text-white"
                 fill="none"
                 stroke="currentColor"
@@ -47,7 +48,15 @@ export default function Header() {
                   strokeWidth={2}
                   d="M8 7h8M8 11h5M3 7l1-3h16l1 3M3 7v10a1 1 0 001 1h1a1 1 0 001-1v-1h12v1a1 1 0 001 1h1a1 1 0 001-1V7M7 17h.01M17 17h.01"
                 />
-              </svg>
+              </svg> */}
+              <Image
+                src="/logo/Design-sans-titre-_1_.svg"
+                alt="Logo"
+                width={20}
+                height={20}
+                className="invert brightness-0"
+                style={{ width: "20px", height: "auto" }}
+              />
             </div>
             <div className="leading-none">
               <span className="font-bold text-lg text-blue-700">Transport</span>
@@ -87,12 +96,32 @@ export default function Header() {
             aria-expanded={isOpen}
           >
             {isOpen ? (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             ) : (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             )}
           </button>
