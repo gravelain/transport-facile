@@ -52,16 +52,13 @@ export default function Header() {
               <Image
                 src="/logo/Design-sans-titre-_1_.svg"
                 alt="Logo"
-                width={20}
-                height={20}
-                className="invert brightness-0"
-                style={{ width: "20px", height: "auto" }}
+                width={0}
+                height={0}
+                className="w-5 h-auto invert brightness-0"
               />
             </div>
             <div className="leading-none">
-              <span className="font-bold text-lg text-blue-700">
-                Transporttttt
-              </span>
+              <span className="font-bold text-lg text-blue-700">Transport</span>
               <span className="font-bold text-lg text-orange-500"> Facile</span>
             </div>
           </Link>

@@ -49,9 +49,9 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-sm leading-relaxed mb-5 max-w-xs">
-              Nous équipons les agences de transport ivoiriennes pour qu&apos;elles
-              vendent plus, gèrent mieux leurs colis, et pilotent leurs recettes
-              en temps réel.
+              Nous équipons les agences de transport ivoiriennes pour
+              qu&apos;elles vendent plus, gèrent mieux leurs colis, et pilotent
+              leurs recettes en temps réel.
             </p>
             <div className="flex items-center gap-2 text-xs">
               <span className="w-2 h-2 bg-orange-400 rounded-full animate-pulse" />
@@ -86,8 +86,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
           <p>
-            © {new Date().getFullYear()} Transport Facile. Tous droits
-            réservés.
+            © {new Date().getFullYear()} Transport Facile. Tous droits réservés.
           </p>
           <p>
             Fait avec passion en{" "}
