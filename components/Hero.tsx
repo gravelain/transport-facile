@@ -36,13 +36,17 @@ export default function Hero() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg text-blue-100 mb-8 max-w-xl leading-relaxed">
+            {/* <p className="text-lg text-blue-100 mb-8 max-w-xl leading-relaxed">
               Vos concurrents vendent encore au guichet.{" "}
               <strong className="text-white">
                 Transport Facile vous donne une longueur d&apos;avance
               </strong>{" "}
               — avec une plateforme numérique complète, déployée aux couleurs
               de votre agence, sans aucun investissement initial.
+            </p> */}
+            <p className="text-lg text-blue-100 mb-8 max-w-xl leading-relaxed">
+              Augmentez vos ventes et simplifiez la réservation en ligne
+              Transport Facile rend votre agence digitale, rapidement.
             </p>
 
             {/* CTAs */}
@@ -226,9 +230,7 @@ export default function Hero() {
                     <p className="text-xs font-semibold text-gray-900">
                       Colis réservé
                     </p>
-                    <p className="text-xs text-gray-500">
-                      Bouaké → Abidjan
-                    </p>
+                    <p className="text-xs text-gray-500">Bouaké → Abidjan</p>
                   </div>
                 </div>
               </div>
