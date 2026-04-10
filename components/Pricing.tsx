@@ -1,4 +1,5 @@
 import DemoModal from "./DemoModal";
+import RevenueSimulator from "./RevenueSimulator";
 
 const commonFeatures = [
   "Mise en ligne de votre agence en 48h",
@@ -170,6 +171,11 @@ export default function Pricing() {
               Si vous ne vendez pas, vous ne payez rien.
             </strong>
           </p>
+        </div>
+
+        {/* Revenue Simulator */}
+        <div className="mb-10">
+          <RevenueSimulator />
         </div>
 
         {/* Lancement entry — soft, non-intrusive */}
