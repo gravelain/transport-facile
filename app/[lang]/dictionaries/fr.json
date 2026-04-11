@@ -1,0 +1,529 @@
+{
+  "meta": {
+    "title": "Transport Facile – Billetterie en ligne pour agences de bus en Côte d'Ivoire",
+    "description": "Transport Facile digitalise les agences de transport interurbain en Côte d'Ivoire. Vente de billets en ligne, QR Code embarquement, gestion de colis, tableau de bord en temps réel. Opérationnel en 48h. Commission à partir de 2,5%, zéro frais fixes."
+  },
+  "nav": {
+    "solutions": "Nos solutions",
+    "howItWorks": "Comment ça marche",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "demoCta": "Demander une démo gratuite"
+  },
+  "hero": {
+    "badge": "Fait pour les agences de transport en Côte d'Ivoire",
+    "h1_1": "Remplissez vos bus.",
+    "h1_2": "Maîtrisez vos colis.",
+    "h1_3": "Pilotez vos recettes en temps réel.",
+    "subtitle": "Vos clients réservent depuis leur téléphone, vos colis sont tracés, vos recettes sont visibles en temps réel.",
+    "subtitleStrong": "Opérationnel en 48h, sans frais fixes, à votre image.",
+    "cta1": "Je veux voir la démo →",
+    "cta2": "Voir les tarifs",
+    "trust": ["Opérationnel en 48h", "0 frais fixe, vous payez sur vos ventes", "Plateforme à votre image"],
+    "scrollCue": "Découvrir",
+    "mockupActive": "Actif",
+    "mockupDeparture": "Départ",
+    "mockupArrival": "Arrivée",
+    "mockupSeats": "Places disponibles",
+    "mockupScan": "Scanner à l'embarquement",
+    "mockupTicket": "Billet #TF-2024-001",
+    "mockupCommission": "Commission / billet",
+    "mockupParcel": "Colis réservé",
+    "mockupParcelRoute": "Bouaké → Abidjan"
+  },
+  "loss": {
+    "badge": "Constat de terrain",
+    "title": "Ce que vivent la plupart des agences, avant de nous parler.",
+    "subtitle": "On l'entend à chaque première conversation. Ces situations ne sont pas une fatalité : elles ont chacune une réponse concrète.",
+    "situations": [
+      {
+        "title": "Réservations limitées aux heures de bureau",
+        "description": "Un client qui veut voyager lundi appelle samedi soir. Le guichet est fermé. Il réserve ailleurs, ou part sans billet. Cette fenêtre ne se récupère pas."
+      },
+      {
+        "title": "Suivi des colis par téléphone et carnet papier",
+        "description": "\"Vous avez mon colis ?\" Sans traçabilité numérique, chaque expédition génère des appels pour vos agents et de l'inquiétude pour votre client."
+      },
+      {
+        "title": "Recettes difficiles à consolider en fin de journée",
+        "description": "Billets papier, recettes colis, avoirs, remboursements. Réconcilier tout cela à la main laisse des zones d'ombre sur ce qui a vraiment été encaissé."
+      }
+    ],
+    "bridgeText": "Chacune de ces situations a une réponse concrète,",
+    "bridgeHighlight": "opérationnelle en 48h",
+    "bridgeCta": "Voir nos solutions"
+  },
+  "services": {
+    "badge": "Nos solutions",
+    "title1": "Deux outils qui transforment votre agence",
+    "title2": "",
+    "subtitle": "Conçus pour le terrain ivoirien. Déployés à votre image. Mis à jour en continu.",
+    "items": [
+      {
+        "serviceBadge": "Billets & Voyageurs",
+        "title": "ResaBus Core",
+        "subtitle": "Vendez vos billets 24h/24, même quand votre guichet est fermé",
+        "description": "Fini les clients qui repartent parce que votre guichet était bondé ou fermé. Avec ResaBus Core, vos voyageurs réservent depuis leur téléphone à n'importe quelle heure. Votre équipe scanne le billet à l'embarquement en 5 secondes. Vos recettes, elles, sont centralisées en temps réel.",
+        "cta": "Je veux en savoir plus",
+        "features": [
+          "Vente de billets en ligne 24h/24, 7j/7, sans guichetier",
+          "Billet numérique envoyé au client en quelques secondes",
+          "Scan QR Code rapide à l'embarquement : 0 erreur, 0 fraude",
+          "Vos recettes du jour visibles en un coup d'œil",
+          "Gestion de vos lignes, horaires et tarifs en toute autonomie",
+          "SMS et email de confirmation automatiques pour vos clients",
+          "Historique complet : fini les fins de caisse floues",
+          "Plateforme déployée aux couleurs de votre agence"
+        ],
+        "mockupBadge": "Billet numérique",
+        "mockupStatus": "Confirmé",
+        "mockupDeparture": "Départ",
+        "mockupDepartureCity": "Abidjan",
+        "mockupDepartureStation": "Gare Nord · 08:00",
+        "mockupDuration": "5h30",
+        "mockupArrival": "Arrivée",
+        "mockupArrivalCity": "Bouaké",
+        "mockupArrivalStation": "Gare centrale · 13:30",
+        "mockupSeat": "Siège",
+        "mockupSeatNumber": "14A",
+        "mockupRef": "Réf. TF-2025-4821"
+      },
+      {
+        "serviceBadge": "Colis & Expéditions",
+        "title": "ResaBus Colis Core",
+        "subtitle": "Transformez votre service colis en source de revenus maîtrisée",
+        "description": "Vos clients font la queue avec leurs colis, votre équipe jongle entre billets et expéditions, et les recettes colis restent floues en fin de journée. ResaBus Colis Core organise tout : le client réserve son créneau en ligne, vous préparez le départ sereinement, et chaque colis est tracé de l'agence jusqu'au destinataire.",
+        "cta": "Je veux en savoir plus",
+        "features": [
+          "Réservation de créneaux colis en ligne, fini les files d'attente",
+          "Bon de prise en charge numérique avec QR Code",
+          "Suivi en temps réel : l'expéditeur sait où est son colis",
+          "Tarification flexible selon le poids et la destination",
+          "Historique des envois par client pour fidéliser votre clientèle",
+          "Alertes automatiques à la réception",
+          "Tableau de bord dédié pour votre équipe colis",
+          "Fonctionne de pair avec ResaBus Core"
+        ],
+        "mockupBadge": "Suivi colis",
+        "mockupStatus": "En transit",
+        "mockupSenderLabel": "Expéditeur",
+        "mockupSender": "Adjamé · Abidjan",
+        "mockupRecipientLabel": "Destinataire",
+        "mockupRecipient": "Bouaké",
+        "mockupWeight": "Poids : 4,5 kg",
+        "mockupPrice": "3 000 FCFA",
+        "mockupStep1": "Pris en charge",
+        "mockupStep2": "En transit",
+        "mockupStep3": "Livré"
+      }
+    ],
+    "comingLabel": "Et ce n'est pas tout. De nouveaux modules arrivent prochainement pour couvrir encore plus de besoins de votre agence.",
+    "comingCta": "Restez informé →"
+  },
+  "trustBar": {
+    "badge": "Pourquoi nos partenaires nous font confiance",
+    "title": "Simple. Sécurisé. Adapté à votre réalité.",
+    "usps": [
+      {
+        "title": "Ultra simple à utiliser",
+        "description": "Pas besoin d'être informaticien. Si vous savez utiliser WhatsApp, vous savez utiliser notre plateforme. Vos agents et vos clients prennent en main l'outil en moins de 10 minutes."
+      },
+      {
+        "title": "Vos clients paient comme ils veulent",
+        "description": "Mobile Money, Wave, Orange Money, MTN MoMo, carte bancaire, Stripe : vos clients choisissent leur mode de paiement préféré. Vous, vous encaissez sans friction."
+      },
+      {
+        "title": "Zéro risque de fraude",
+        "description": "Chaque billet est unique, sécurisé et vérifiable par QR Code. Fini les billets copiés, les doublons, ou les agents qui gèrent la caisse à leur façon."
+      },
+      {
+        "title": "Rapide à déployer, facile à faire évoluer",
+        "description": "Votre agence est opérationnelle en 48h. Et à chaque mise à jour, votre plateforme s'améliore automatiquement, sans interruption de service, sans coût supplémentaire."
+      }
+    ],
+    "paymentTitle": "Moyens de paiement acceptés par votre plateforme",
+    "paymentMore": "+ d'autres à venir",
+    "paymentCaption": "Vos clients paient avec le moyen qu'ils utilisent au quotidien. Vous encaissez directement, en toute sécurité."
+  },
+  "appPreview": {
+    "badge": "La plateforme en images",
+    "title1": "Simple pour vos clients.",
+    "title2": "Puissant pour votre agence.",
+    "subtitle": "Voici exactement à quoi ressemble ResaBus, côté voyageur sur mobile, et côté direction sur le tableau de bord.",
+    "clientLabel": "Vue client · Sur mobile",
+    "bookingTitle": "Réservation de billet",
+    "bookingSubtitle": "Choisissez votre trajet",
+    "departure": "Départ",
+    "arrival": "Arrivée",
+    "seatsLeft": "14 places restantes",
+    "seatSelected": "Siège sélectionné",
+    "seatNumber": "14A ✓",
+    "payCta": "Payer et recevoir mon billet →",
+    "qrTitle": "Billet reçu",
+    "qrScan": "Scanner en gare",
+    "clientCaption": "Le client réserve depuis son téléphone, paie avec Wave ou Orange Money, et reçoit son QR Code immédiatement.",
+    "agencyLabel": "Vue agence · Tableau de bord",
+    "dashboardGreeting": "Bonjour, Direction 👋",
+    "dashboardTitle": "Tableau de bord · Aujourd'hui",
+    "onlineStatus": "● En ligne",
+    "kpis": [
+      { "label": "Billets vendus", "unit": "" },
+      { "label": "Recettes du jour", "unit": "FCFA" },
+      { "label": "Taux de remplissage", "unit": "" }
+    ],
+    "chartLabel": "Ventes par départ, cette semaine",
+    "days": ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Auj."],
+    "bookingsTitle": "Dernières réservations",
+    "statusConfirmed": "Confirmé",
+    "statusPending": "En attente",
+    "agencyCaption": "Le directeur d'agence suit ses recettes, ses départs et ses réservations en temps réel, depuis n'importe où.",
+    "bottomText": "Vous voulez voir votre agence dans ce tableau de bord ?",
+    "bottomCta": "Demander une démo personnalisée"
+  },
+  "howItWorks": {
+    "badge": "Comment ça marche",
+    "title": "Votre agence en ligne en 48h, sans prise de tête",
+    "subtitle": "Nous gérons tout de A à Z. Vous, vous vous concentrez sur votre business. Voici comment ça se passe.",
+    "steps": [
+      {
+        "title": "On se parle, 30 minutes suffisent",
+        "description": "Un appel ou un message WhatsApp. En 30 minutes, on comprend votre agence, vos lignes, vos départs, vos défis. Pas de jargon technique, pas de formulaires interminables. Une vraie conversation métier."
+      },
+      {
+        "title": "On configure votre plateforme à votre image",
+        "description": "Vos lignes, vos horaires, vos tarifs, vos couleurs, votre logo. Nous paramétrons votre espace ResaBus de A à Z. Vos clients verront votre agence modernisée, pas Transport Facile. La technologie est la nôtre, la plateforme est la vôtre."
+      },
+      {
+        "title": "Vos clients réservent. Vous encaissez.",
+        "description": "En 48h à partir de notre premier échange, votre agence est en ligne. Vos clients réservent leurs billets et leurs colis depuis leur téléphone. Vos recettes sont centralisées et consultables à tout moment, depuis votre bureau ou votre domicile."
+      }
+    ],
+    "cta": "Je veux démarrer"
+  },
+  "pricing": {
+    "badge": "Tarifs",
+    "title1": "Pas de frais fixes. Pas de risque.",
+    "title2": "On grandit ensemble.",
+    "subtitle": "Aucun frais d'installation. Aucun abonnement mensuel. Une commission uniquement sur les billets vendus en ligne via votre plateforme.",
+    "subtitleStrong": "Si vous ne vendez pas, vous ne payez rien.",
+    "trialTitle": "Testez le plan Pro gratuitement pendant 30 jours.",
+    "trialSubtitle": "Aucune information bancaire requise. Vous évaluez la plateforme dans les conditions réelles de votre agence, et vous décidez librement à l'issue des 30 jours.",
+    "trialCta": "Démarrer l'essai gratuit →",
+    "commonTitle": "Ce que vous obtenez dès le premier jour, quel que soit votre plan",
+    "commonSubtitle": "Ces fonctionnalités sont incluses pour tous, sans exception.",
+    "commonFeatures": [
+      "Votre agence en ligne en 48h à partir du premier échange",
+      "Billet numérique avec QR Code sécurisé à l'embarquement",
+      "Tableau de bord de vos recettes, consultable à tout moment",
+      "Mises à jour continues, sans interruption ni coût supplémentaire",
+      "Wave, Orange Money, MTN MoMo, Mobile Money, carte bancaire",
+      "Formation de votre équipe guichet incluse dès le démarrage"
+    ],
+    "extrasLabel": "Ce que vous obtenez en plus",
+    "lockedLabel": "Non inclus dans ce plan",
+    "plans": [
+      {
+        "name": "Essentiel",
+        "positioning": "Pour démarrer",
+        "tagline": "La billetterie en ligne, sans complication.",
+        "price": "3%",
+        "retained": "Vous gardez 97 FCFA sur chaque 100 FCFA vendus en ligne.",
+        "priceSuffix": "de commission par billet vendu en ligne",
+        "priceNote": null,
+        "cta": "Commencer avec Essentiel",
+        "extras": [
+          "Vos clients réservent leurs billets en ligne, à toute heure",
+          "Vous gérez vos lignes, vos horaires et vos tarifs en autonomie",
+          "Votre plateforme à votre image : logo, couleurs, nom de votre agence",
+          "Votre client reçoit son billet par email, automatiquement",
+          "Assistance par email, réponse sous 24h ouvrées"
+        ],
+        "locked": [
+          "Gestion des colis et expéditions en ligne",
+          "Notifications SMS pour vos clients",
+          "Rapports mensuels de performance"
+        ]
+      },
+      {
+        "name": "Pro",
+        "positioning": "Le plus choisi",
+        "tagline": "Billets, colis, suivi des recettes. Tout en un seul endroit.",
+        "price": "2,5%",
+        "retained": "Vous gardez 97,5 FCFA sur chaque 100 FCFA vendus en ligne.",
+        "priceSuffix": "de commission par billet vendu en ligne",
+        "priceNote": "La commission la plus basse. La plateforme la plus complète.",
+        "cta": "Démarrer l'essai gratuit",
+        "extras": [
+          "Vos clients réservent leurs billets en ligne, à toute heure",
+          "Réservation de colis en ligne, suivi en temps réel pour l'expéditeur",
+          "Contrôle à l'embarquement par QR Code : zéro erreur, zéro fraude",
+          "Votre client reçoit son billet et ses alertes par SMS et par email",
+          "Tableau de bord et rapports mensuels de vos performances",
+          "Votre plateforme à votre image, de A à Z",
+          "Assistance prioritaire, réponse sous 4h"
+        ],
+        "locked": []
+      },
+      {
+        "name": "Enterprise",
+        "positioning": "Sur mesure",
+        "tagline": "Pour les réseaux qui opèrent à grande échelle.",
+        "price": "À partir de 1,5%",
+        "retained": "Plus votre réseau grandit, moins vous payez de commission.",
+        "priceSuffix": "commission négociée selon votre volume",
+        "priceNote": null,
+        "cta": "Obtenir un rendez-vous",
+        "extras": [
+          "Accès en avant-première à tous les nouveaux modules",
+          "Votre propre infrastructure, isolée et dédiée à votre réseau",
+          "Tableaux de bord et rapports construits selon vos besoins",
+          "Un chef de projet dédié à votre compte",
+          "Assistance disponible 24h/24, 7j/7",
+          "Formation de votre équipe réalisée sur site",
+          "Contrat de service avec engagement de disponibilité de la plateforme"
+        ],
+        "locked": []
+      }
+    ],
+    "planBadge": "30 jours offerts",
+    "reassurances": [
+      {
+        "title": "Sans engagement",
+        "desc": "Changez de plan ou arrêtez quand vous voulez. Sans préavis, sans pénalité."
+      },
+      {
+        "title": "On gagne uniquement si vous gagnez",
+        "desc": "Aucun frais fixe. Notre commission ne s'applique que sur les ventes réelles. Zéro vente, zéro coût."
+      },
+      {
+        "title": "Pas sûr du bon plan ?",
+        "desc": "On vous conseille sans engagement.",
+        "link": "Décrivez-nous votre agence →"
+      }
+    ]
+  },
+  "simulator": {
+    "title": "Simulez vos recettes",
+    "subtitle": "Entrez vos chiffres, voyez ce que vous gagnez chaque mois.",
+    "ticketsLabel": "Billets vendus par jour",
+    "ticketsUnit": "billets",
+    "priceLabel": "Prix moyen par billet",
+    "planLabel": "Choisissez votre plan",
+    "netLabel": "Votre revenu mensuel net",
+    "netUnit": "k FCFA",
+    "netDay": "soit",
+    "netDayUnit": "par jour",
+    "grossLabel": "Recettes brutes/mois",
+    "commissionLabel": "Commission Transport Facile",
+    "encaisseLabel": "Ce que vous encaissez",
+    "proUpsell": "En passant au plan Pro, vous économisez",
+    "proUpsellSuffix": "de commission par mois sur ce volume.",
+    "proConfirm": "Vous êtes sur le meilleur rapport qualité / commission. Le plan Pro inclut aussi la gestion des colis et les SMS automatiques.",
+    "disclaimer": "Simulation indicative basée sur les ventes en ligne. Commission prélevée uniquement sur les billets vendus via la plateforme."
+  },
+  "socialProof": {
+    "badge": "Ils ont digitalisé leur agence",
+    "title": "Ce que disent nos partenaires",
+    "subtitle": "Des directeurs d'agence qui ont fait le choix du numérique. En leurs propres mots.",
+    "testimonials": [
+      {
+        "quote": "Avant Transport Facile, je comptais mes billets à la main en fin de journée. Maintenant, je vois mes recettes en temps réel depuis mon téléphone. Je gagne au moins deux heures par jour, et mes recettes ont augmenté parce que les clients réservent même la nuit.",
+        "name": "Koffi A.",
+        "role": "Directeur général",
+        "agency": "Agence Fié Trans",
+        "lines": "Abidjan · Bouaké · Daloa",
+        "initial": "K",
+        "color": "bg-blue-700"
+      },
+      {
+        "quote": "Mes clients venaient de loin pour réserver au guichet. Maintenant ils le font depuis chez eux avec Wave, et mes bus partent à l'heure avec bien moins de bousculade. La file d'attente a diminué de moitié, et mes agents sont moins stressés.",
+        "name": "Adjoua M.",
+        "role": "Gérante",
+        "agency": "Express Bus CI",
+        "lines": "Abidjan · Yamoussoukro",
+        "initial": "A",
+        "color": "bg-orange-500"
+      },
+      {
+        "quote": "J'avais peur que ce soit compliqué pour mes agents. En une heure de formation, tout le monde savait utiliser la plateforme. En 48h, on était opérationnel. Ce que j'attendais depuis des années.",
+        "name": "Yao B.",
+        "role": "Directeur commercial",
+        "agency": "Trans Ivoir",
+        "lines": "Abidjan · San-Pédro · Gagnoa",
+        "initial": "Y",
+        "color": "bg-blue-900"
+      }
+    ],
+    "stats": [
+      { "value": "48h", "label": "Délai de mise en ligne", "sub": "Garanti contractuellement" },
+      { "value": "0 FCFA", "label": "Frais fixes", "sub": "Commission sur ventes seulement" },
+      { "value": "6", "label": "Moyens de paiement", "sub": "Wave, Orange Money, MTN, carte…" },
+      { "value": "100%", "label": "White-label", "sub": "Vos couleurs, votre marque" }
+    ],
+    "bottomText": "Prêt à rejoindre les agences qui ont pris de l'avance ?",
+    "bottomCta": "Devenir partenaire"
+  },
+  "about": {
+    "badge": "À propos",
+    "title1": "Nous connaissons votre secteur.",
+    "title2": "Nous avons construit les outils qu'il mérite.",
+    "p1": "Transport Facile est né d'un constat simple : le transport interurbain ivoirien brasse des millions chaque jour, et pourtant, la plupart des agences fonctionnent encore avec un carnet, un stylo, et beaucoup de bonne volonté.",
+    "p2Start": "Notre réponse : des outils numériques puissants développés entièrement en interne :",
+    "p2Product1": "ResaBus Core",
+    "p2Mid": "pour la billetterie et",
+    "p2Product2": "ResaBus Colis Core",
+    "p2End": "pour les expéditions, déployés et personnalisés pour chaque agence partenaire. Et d'autres modules arrivent.",
+    "p3Start": "Nous ne vendons pas une application générique. Nous construisons",
+    "p3Strong": "votre plateforme",
+    "p3End": ", avec vos couleurs, vos règles, votre identité. Ce que vos clients verront, c'est votre agence, modernisée.",
+    "cta1": "Devenir partenaire",
+    "cta2": "Voir nos solutions",
+    "values": [
+      {
+        "title": "Une technologie taillée pour votre marché",
+        "description": "Nos outils sont pensés pour les réalités du transport ivoirien : les départs matinaux, les lignes Abidjan-Bouaké, les clients qui paient via Mobile Money ou Wave, les colis urgents. Pas une solution importée qui ne comprend pas votre terrain."
+      },
+      {
+        "title": "Votre image. Votre marque. Votre plateforme.",
+        "description": "Chaque agence partenaire obtient sa propre plateforme : son nom, ses couleurs, ses tarifs, ses lignes. Vos clients ne voient pas Transport Facile. Ils voient votre agence, modernisée et professionnelle. La technologie est la nôtre. La plateforme est la vôtre."
+      },
+      {
+        "title": "Une relation dans la durée, pas juste un contrat",
+        "description": "On ne vous livre pas un outil et on disparaît. Votre succès, c'est notre succès. On suit vos performances, on met à jour votre plateforme, on est disponibles quand vous avez besoin d'aide, et on développe sans cesse de nouveaux modules pour votre agence."
+      }
+    ],
+    "stats": [
+      { "value": "0 FCFA", "label": "de frais fixes" },
+      { "value": "48h", "label": "pour démarrer" },
+      { "value": "100%", "label": "à votre image" }
+    ]
+  },
+  "faq": {
+    "badge": "Questions fréquentes",
+    "title1": "Vous avez des questions.",
+    "title2": "Voici les vraies réponses.",
+    "subtitle": "Ces questions reviennent à chaque première conversation. On y répond franchement, sans jargon.",
+    "faqs": [
+      {
+        "q": "Comment fonctionne exactement le paiement par commission ?",
+        "a": "Vous ne payez rien à l'avance : ni frais d'installation, ni abonnement mensuel. Transport Facile prélève uniquement une commission sur les billets vendus en ligne via votre plateforme. Si vous vendez 0 billet, vous payez 0 FCFA. La commission varie de 2,5% (plan Pro) à 3% (plan Essentiel) du prix du billet. Elle est automatiquement déduite à chaque transaction : vous recevez le reste directement."
+      },
+      {
+        "q": "Est-ce que mes clients ont besoin d'un smartphone ou d'internet ?",
+        "a": "Vos clients ont simplement besoin d'un téléphone capable de recevoir un SMS ou un message WhatsApp, même un téléphone basique suffit pour recevoir le billet. Pour réserver, ils peuvent aussi passer par un proche avec un smartphone. La plateforme est optimisée pour les connexions lentes (3G, Edge) et les petits écrans mobiles."
+      },
+      {
+        "q": "Que se passe-t-il si internet tombe en gare au moment de l'embarquement ?",
+        "a": "Votre agent peut vérifier les billets en mode hors-ligne pendant une courte période. Les données sont synchronisées automatiquement dès que la connexion revient. En dernier recours, le client peut présenter le SMS de confirmation reçu, que votre agent vérifie manuellement. Nous travaillons aussi sur un mode hors-ligne complet pour les zones à faible couverture réseau."
+      },
+      {
+        "q": "Combien de temps prend réellement la mise en place ?",
+        "a": "En pratique, votre plateforme est configurée et opérationnelle en 48h à partir de notre premier échange. Voici le déroulé : Jour 1, on paramètre vos lignes, horaires, tarifs et votre identité visuelle (logo, couleurs). Jour 2, on forme votre équipe (1h suffit) et on effectue un test de départ réel. Vos clients peuvent réserver dès le lendemain. La formation de votre équipe guichet est incluse."
+      },
+      {
+        "q": "Est-ce que je garde mon guichet physique ? Mes agents perdent-ils leur travail ?",
+        "a": "Absolument pas. Transport Facile complète votre guichet, il ne le remplace pas. Vos agents continuent à vendre des billets physiquement pour les clients qui préfèrent se déplacer. La plateforme leur simplifie le travail : plus de comptage manuel, plus de fin de caisse floue. Beaucoup d'agences partenaires ont constaté que leurs agents passent moins de temps sur les files et plus de temps à bien servir les clients."
+      },
+      {
+        "q": "Qui voit mes données de recettes ? Sont-elles confidentielles ?",
+        "a": "Vos données appartiennent à votre agence, point. Transport Facile n'accède à vos données de recettes qu'en cas de besoin technique déclaré et avec votre accord. Nous ne les partageons jamais avec des tiers. Toutes les données sont chiffrées en transit (HTTPS) et au repos. Nous appliquons les bonnes pratiques de sécurité des données (isolation par agence, accès restreint)."
+      },
+      {
+        "q": "Puis-je gérer plusieurs lignes, plusieurs départs et plusieurs gares depuis une seule interface ?",
+        "a": "Oui, c'est précisément l'un des atouts de la plateforme. Vous gérez toutes vos lignes, tous vos horaires, tous vos tarifs depuis un tableau de bord unique. Vous pouvez créer autant de lignes que nécessaire (Abidjan–Bouaké, Abidjan–Man, Abidjan–San Pedro…), définir des horaires différents par jour, et modifier les tarifs en temps réel. Les agences Enterprise disposent d'une infrastructure entièrement dédiée à leur réseau."
+      },
+      {
+        "q": "Que se passe-t-il si un client veut un remboursement ou annule son billet ?",
+        "a": "La politique de remboursement est définie par votre agence, pas par Transport Facile. Vous gardez le contrôle total sur vos conditions. Notre tableau de bord vous permet de gérer les annulations et les remboursements manuellement ou automatiquement, selon les règles que vous définissez. Le client est notifié automatiquement par SMS ou WhatsApp dès que le remboursement est traité."
+      }
+    ],
+    "bottomTitle": "Vous avez une autre question ?",
+    "bottomSubtitle": "On répond sur WhatsApp en moins de quelques heures. Pas de script, une vraie conversation.",
+    "bottomCta": "Poser ma question sur WhatsApp"
+  },
+  "contact": {
+    "badge": "Contactez-nous",
+    "title": "Écrivez-nous. On vous répond vite.",
+    "subtitle": "Question sur nos offres, projet de partenariat, ou demande Enterprise : choisissez votre sujet dans le formulaire et on prend la main.",
+    "types": {
+      "question": {
+        "label": "J'ai une question",
+        "placeholder": "Ex : Je veux comprendre comment fonctionne la gestion des colis, ou quel plan correspond à mon agence...",
+        "cta": "Envoyer ma question"
+      },
+      "partenariat": {
+        "label": "Je veux devenir partenaire",
+        "placeholder": "Ex : Notre agence fait Abidjan-Bouaké, 4 départs/jour. On cherche à digitaliser billets et colis...",
+        "cta": "Discutons de notre partenariat"
+      },
+      "enterprise": {
+        "label": "Offre Enterprise",
+        "placeholder": "Ex : Nous opérons 12 lignes en Côte d'Ivoire et souhaitons une solution dédiée pour notre groupe...",
+        "cta": "Demander un rendez-vous"
+      }
+    },
+    "subjectLabel": "Quel est votre sujet ?",
+    "nameLabel": "Votre nom",
+    "namePlaceholder": "Konan Didier",
+    "agencyLabel": "Votre agence",
+    "agencyPlaceholder": "Agence Express CI",
+    "emailLabel": "Email",
+    "emailPlaceholder": "konan@agence.ci",
+    "phoneLabel": "WhatsApp",
+    "phonePlaceholder": "+225 07 XX XX XX XX",
+    "messageLabel": "Votre message",
+    "responseTimePre": "Réponse sous",
+    "responseTimeValue": "24 heures ouvrées",
+    "responseNote": "Pas de jargon, pas de pression. Une vraie conversation métier.",
+    "sending": "Envoi en cours…",
+    "privacy": "Vos informations restent confidentielles et ne seront jamais partagées.",
+    "successTitle": "Message reçu !",
+    "successDesc": "Notre équipe revient vers vous sous 24h ouvrées. En attendant, n'hésitez pas à explorer nos tarifs.",
+    "sendAnother": "Envoyer un autre message",
+    "contactEmail": "Email",
+    "contactWhatsapp": "WhatsApp",
+    "contactWhatsappValue": "+33 6 52 94 53 83",
+    "contactLocation": "Localisation",
+    "contactLocationValue": "Abidjan, Côte d'Ivoire"
+  },
+  "footer": {
+    "description": "Nous équipons les agences de transport ivoiriennes pour qu'elles vendent plus, gèrent mieux leurs colis, et pilotent leurs recettes en temps réel.",
+    "location": "Basé à Abidjan, Côte d'Ivoire",
+    "sections": {
+      "solutions": {
+        "title": "Solutions",
+        "links": [
+          { "label": "ResaBus Core", "href": "#services" },
+          { "label": "ResaBus Colis Core", "href": "#services" },
+          { "label": "Comment ça marche", "href": "#comment-ca-marche" },
+          { "label": "Nos tarifs", "href": "#tarifs" }
+        ]
+      },
+      "entreprise": {
+        "title": "Entreprise",
+        "links": [
+          { "label": "À propos", "href": "#a-propos" },
+          { "label": "FAQ", "href": "#faq" },
+          { "label": "Demander une démo", "href": "#contact" },
+          { "label": "Contact", "href": "#contact" }
+        ]
+      },
+      "legal": {
+        "title": "Légal",
+        "links": [
+          { "label": "Mentions légales", "href": "#" },
+          { "label": "Politique de confidentialité", "href": "#" },
+          { "label": "CGU", "href": "#" }
+        ]
+      }
+    },
+    "copyright": "Tous droits réservés.",
+    "madeWith": "Fait avec passion en",
+    "country": "Côte d'Ivoire"
+  },
+  "whatsapp": {
+    "label": "Discutons sur WhatsApp",
+    "message": "Bonjour%2C%20je%20voudrais%20en%20savoir%20plus%20sur%20Transport%20Facile%20pour%20mon%20agence."
+  }
+}

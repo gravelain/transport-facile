@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useDictionary } from "@/context/DictionaryContext";
 
 type RequestType = "question" | "partenariat" | "enterprise";
 
@@ -22,69 +23,54 @@ const initialState: FormState = {
   message: "",
 };
 
-const typeConfig: Record<
-  RequestType,
-  { label: string; placeholder: string; cta: string }
-> = {
-  question: {
-    label: "J'ai une question",
-    placeholder:
-      "Ex : Je veux comprendre comment fonctionne la gestion des colis, ou quel plan correspond à mon agence...",
-    cta: "Envoyer ma question",
-  },
-  partenariat: {
-    label: "Je veux devenir partenaire",
-    placeholder:
-      "Ex : Notre agence fait Abidjan-Bouaké, 4 départs/jour. On cherche à digitaliser billets et colis...",
-    cta: "Discutons de notre partenariat",
-  },
-  enterprise: {
-    label: "Offre Enterprise",
-    placeholder:
-      "Ex : Nous opérons 12 lignes en Côte d'Ivoire et souhaitons une solution dédiée pour notre groupe...",
-    cta: "Demander un rendez-vous",
-  },
-};
-
-const contactInfo = [
-  {
-    label: "Email",
-    value: "contact@transport-facile.com",
-    href: "mailto:contact@transport-facile.com",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
-  },
-  {
-    label: "WhatsApp",
-    value: "+33 6 52 94 53 83",
-    href: "https://wa.me/33652945383",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-      </svg>
-    ),
-  },
-  {
-    label: "Localisation",
-    value: "Abidjan, Côte d'Ivoire",
-    href: null,
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
-  },
-];
-
 export default function Contact() {
+  const dict = useDictionary();
+  const d = dict.contact;
+
+  const typeConfig = {
+    question: d.types.question,
+    partenariat: d.types.partenariat,
+    enterprise: d.types.enterprise,
+  } as const;
+
+  const contactInfo = [
+    {
+      label: d.contactEmail,
+      value: "contact@transport-facile.com",
+      href: "mailto:contact@transport-facile.com",
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+    },
+    {
+      label: d.contactWhatsapp,
+      value: d.contactWhatsappValue,
+      href: "https://wa.me/33652945383",
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+      ),
+    },
+    {
+      label: d.contactLocation,
+      value: d.contactLocationValue,
+      href: null,
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      ),
+    },
+  ];
+
   const [form, setForm] = useState<FormState>(initialState);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -116,13 +102,13 @@ export default function Contact() {
           {/* ── Left ── */}
           <div>
             <span className="text-orange-400 font-semibold text-sm uppercase tracking-wider">
-              Contactez-nous
+              {d.badge}
             </span>
             <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
-              Écrivez-nous. On vous répond vite.
+              {d.title}
             </h2>
             <p className="text-blue-200 leading-relaxed mb-10 max-w-sm">
-              Question sur nos offres, projet de partenariat, ou demande Enterprise : choisissez votre sujet dans le formulaire et on prend la main.
+              {d.subtitle}
             </p>
 
             {/* Contact details */}
@@ -153,19 +139,14 @@ export default function Contact() {
 
             {/* Response time */}
             <div className="flex items-start gap-3 bg-blue-800/50 rounded-xl px-5 py-4 border border-blue-700/40">
-              <svg
-                className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+              <svg className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                   d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <p className="text-blue-200 text-sm leading-relaxed">
-                Réponse sous{" "}
-                <strong className="text-white">24 heures ouvrées</strong>.
-                Pas de jargon, pas de pression. Une vraie conversation métier.
+                {d.responseTimePre}{" "}
+                <strong className="text-white">{d.responseTimeValue}</strong>.{" "}
+                {d.responseNote}
               </p>
             </div>
           </div>
@@ -179,17 +160,15 @@ export default function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Message reçu !
-                </h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{d.successTitle}</h3>
                 <p className="text-gray-500 text-sm max-w-xs mx-auto leading-relaxed mb-6">
-                  Notre équipe revient vers vous sous 24h ouvrées. En attendant, n&apos;hésitez pas à explorer nos tarifs.
+                  {d.successDesc}
                 </p>
                 <button
                   onClick={() => { setSubmitted(false); setForm(initialState); }}
                   className="text-blue-700 text-sm font-semibold hover:underline"
                 >
-                  Envoyer un autre message
+                  {d.sendAnother}
                 </button>
               </div>
             ) : (
@@ -201,7 +180,7 @@ export default function Contact() {
                 {/* Type selector */}
                 <div>
                   <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2.5">
-                    Quel est votre sujet ?
+                    {d.subjectLabel}
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                     {(Object.entries(typeConfig) as [RequestType, typeof typeConfig[RequestType]][]).map(
@@ -227,23 +206,23 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1.5">
-                      Votre nom <span className="text-red-400">*</span>
+                      {d.nameLabel} <span className="text-red-400">*</span>
                     </label>
                     <input
                       id="name" name="name" type="text" required
                       value={form.name} onChange={handleChange}
-                      placeholder="Konan Didier"
+                      placeholder={d.namePlaceholder}
                       className="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                     />
                   </div>
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1.5">
-                      Votre agence <span className="text-red-400">*</span>
+                      {d.agencyLabel} <span className="text-red-400">*</span>
                     </label>
                     <input
                       id="company" name="company" type="text" required
                       value={form.company} onChange={handleChange}
-                      placeholder="Agence Express CI"
+                      placeholder={d.agencyPlaceholder}
                       className="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                     />
                   </div>
@@ -253,32 +232,32 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1.5">
-                      Email <span className="text-red-400">*</span>
+                      {d.emailLabel} <span className="text-red-400">*</span>
                     </label>
                     <input
                       id="email" name="email" type="email" required
                       value={form.email} onChange={handleChange}
-                      placeholder="konan@agence.ci"
+                      placeholder={d.emailPlaceholder}
                       className="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                     />
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1.5">
-                      WhatsApp
+                      {d.phoneLabel}
                     </label>
                     <input
                       id="phone" name="phone" type="tel"
                       value={form.phone} onChange={handleChange}
-                      placeholder="+225 07 XX XX XX XX"
+                      placeholder={d.phonePlaceholder}
                       className="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                     />
                   </div>
                 </div>
 
-                {/* Message — placeholder dynamique */}
+                {/* Message */}
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1.5">
-                    Votre message
+                    {d.messageLabel}
                   </label>
                   <textarea
                     id="message" name="message" rows={4}
@@ -288,7 +267,7 @@ export default function Contact() {
                   />
                 </div>
 
-                {/* Submit — CTA dynamique */}
+                {/* Submit */}
                 <button
                   type="submit"
                   disabled={loading}
@@ -300,16 +279,14 @@ export default function Contact() {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                       </svg>
-                      Envoi en cours…
+                      {d.sending}
                     </>
                   ) : (
                     current.cta
                   )}
                 </button>
 
-                <p className="text-xs text-gray-400 text-center">
-                  Vos informations restent confidentielles et ne seront jamais partagées.
-                </p>
+                <p className="text-xs text-gray-400 text-center">{d.privacy}</p>
               </form>
             )}
           </div>

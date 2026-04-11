@@ -1,26 +1,15 @@
 import Link from "next/link";
+import type { Dictionary } from "@/context/DictionaryContext";
 
-const footerLinks = {
-  Solutions: [
-    { label: "ResaBus Core", href: "#services" },
-    { label: "ResaBus Colis Core", href: "#services" },
-    { label: "Comment ça marche", href: "#comment-ca-marche" },
-    { label: "Nos tarifs", href: "#tarifs" },
-  ],
-  Entreprise: [
-    { label: "À propos", href: "#a-propos" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Demander une démo", href: "#contact" },
-    { label: "Contact", href: "#contact" },
-  ],
-  Légal: [
-    { label: "Mentions légales", href: "#" },
-    { label: "Politique de confidentialité", href: "#" },
-    { label: "CGU", href: "#" },
-  ],
-};
+type Props = { dict: Dictionary["footer"] };
 
-export default function Footer() {
+export default function Footer({ dict }: Props) {
+  const sections = [
+    dict.sections.solutions,
+    dict.sections.entreprise,
+    dict.sections.legal,
+  ];
+
   return (
     <footer className="bg-gray-950 text-gray-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
@@ -49,27 +38,19 @@ export default function Footer() {
                 <span className="font-bold text-orange-500"> Facile</span>
               </div>
             </Link>
-            <p className="text-sm leading-relaxed mb-5 max-w-xs">
-              Nous équipons les agences de transport ivoiriennes pour
-              qu&apos;elles vendent plus, gèrent mieux leurs colis, et pilotent
-              leurs recettes en temps réel.
-            </p>
+            <p className="text-sm leading-relaxed mb-5 max-w-xs">{dict.description}</p>
             <div className="flex items-center gap-2 text-xs">
               <span className="w-2 h-2 bg-orange-400 rounded-full animate-pulse" />
-              <span className="text-gray-500">
-                Basé à Abidjan, Côte d&apos;Ivoire
-              </span>
+              <span className="text-gray-500">{dict.location}</span>
             </div>
           </div>
 
           {/* Link columns */}
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h3 className="text-white font-semibold text-sm mb-4">
-                {category}
-              </h3>
+          {sections.map((section) => (
+            <div key={section.title}>
+              <h3 className="text-white font-semibold text-sm mb-4">{section.title}</h3>
               <ul className="space-y-3">
-                {links.map((link) => (
+                {section.links.map((link) => (
                   <li key={link.label}>
                     <a
                       href={link.href}
@@ -87,11 +68,11 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
           <p>
-            © {new Date().getFullYear()} Transport Facile. Tous droits réservés.
+            © {new Date().getFullYear()} Transport Facile. {dict.copyright}
           </p>
           <p>
-            Fait avec passion en{" "}
-            <span className="text-orange-400">Côte d&apos;Ivoire</span>
+            {dict.madeWith}{" "}
+            <span className="text-orange-400">{dict.country}</span>
           </p>
         </div>
       </div>

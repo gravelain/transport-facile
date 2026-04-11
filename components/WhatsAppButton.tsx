@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useDictionary } from "@/context/DictionaryContext";
 
 export default function WhatsAppButton() {
+  const dict = useDictionary();
   const [visible, setVisible] = useState(false);
 
   // Apparaît après 3 secondes + après le premier scroll
@@ -20,7 +22,7 @@ export default function WhatsAppButton() {
 
   return (
     <a
-      href="https://wa.me/33652945383?text=Bonjour%2C%20je%20voudrais%20en%20savoir%20plus%20sur%20Transport%20Facile%20pour%20mon%20agence."
+      href={`https://wa.me/33652945383?text=${dict.whatsapp.message}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Nous contacter sur WhatsApp"
@@ -28,7 +30,7 @@ export default function WhatsAppButton() {
     >
       {/* Label (visible au hover sur desktop) */}
       <span className="hidden sm:block max-w-0 group-hover:max-w-xs overflow-hidden whitespace-nowrap transition-all duration-300 pl-0 group-hover:pl-5 text-sm font-semibold">
-        Discutons sur WhatsApp
+        {dict.whatsapp.label}
       </span>
 
       {/* Icône WhatsApp */}

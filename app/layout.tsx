@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { headers } from "next/headers";
 import "./globals.css";
 
 const inter = Inter({
@@ -188,13 +189,16 @@ const softwareJsonLd = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const locale = headersList.get("x-locale") ?? "fr";
+
   return (
-    <html lang="fr" className={inter.variable}>
+    <html lang={locale} className={inter.variable}>
       <head>
         {/* Preconnect pour performances */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -4,16 +4,21 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import DemoModal from "./DemoModal";
 import Image from "next/image";
-
-const navLinks = [
-  { href: "#services", label: "Nos solutions" },
-  { href: "#comment-ca-marche", label: "Comment ça marche" },
-  { href: "#tarifs", label: "Tarifs" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
-];
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useDictionary } from "@/context/DictionaryContext";
 
 export default function Header() {
+  const dict = useDictionary();
+  const nav = dict.nav;
+
+  const navLinks = [
+    { href: "#services", label: nav.solutions },
+    { href: "#comment-ca-marche", label: nav.howItWorks },
+    { href: "#tarifs", label: nav.pricing },
+    { href: "#faq", label: nav.faq },
+    { href: "#contact", label: nav.contact },
+  ];
+
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -36,20 +41,6 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
             <div className="w-9 h-9 bg-blue-700 rounded-lg flex items-center justify-center flex-shrink-0">
-              {/* <svg
-                className="w-5 h-5 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M8 7h8M8 11h5M3 7l1-3h16l1 3M3 7v10a1 1 0 001 1h1a1 1 0 001-1v-1h12v1a1 1 0 001 1h1a1 1 0 001-1V7M7 17h.01M17 17h.01"
-                />
-              </svg> */}
               <Image
                 src="/logo/Design-sans-titre-_1_.svg"
                 alt="Logo"
@@ -80,10 +71,11 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Desktop CTA — une seule action, claire */}
-          <div className="hidden md:flex items-center">
+          {/* Desktop CTA + Language switcher */}
+          <div className="hidden md:flex items-center gap-3">
+            <LanguageSwitcher />
             <DemoModal
-              triggerLabel="Demander une démo gratuite"
+              triggerLabel={nav.demoCta}
               triggerClassName="bg-orange-500 text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-orange-600 transition-all shadow-sm shadow-orange-200 cursor-pointer"
             />
           </div>
@@ -140,9 +132,10 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            <div className="pt-3 pb-1 px-4">
+            <div className="pt-3 pb-1 px-4 flex flex-col gap-3">
+              <LanguageSwitcher />
               <DemoModal
-                triggerLabel="Demander une démo gratuite"
+                triggerLabel={nav.demoCta}
                 triggerClassName="w-full text-center bg-orange-500 text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-orange-600 transition-colors cursor-pointer block"
               />
             </div>

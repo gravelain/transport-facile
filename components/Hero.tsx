@@ -1,6 +1,9 @@
 import DemoModal from "./DemoModal";
+import type { Dictionary } from "@/context/DictionaryContext";
 
-export default function Hero() {
+type Props = { dict: Dictionary["hero"] };
+
+export default function Hero({ dict }: Props) {
   return (
     <section
       className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 min-h-screen flex items-center pt-16"
@@ -20,9 +23,7 @@ export default function Hero() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6 border border-white/10">
               <span className="w-2 h-2 bg-orange-400 rounded-full animate-pulse flex-shrink-0" />
-              <span className="text-white/90 text-sm font-medium">
-                Fait pour les agences de transport en Côte d&apos;Ivoire
-              </span>
+              <span className="text-white/90 text-sm font-medium">{dict.badge}</span>
             </div>
 
             {/* Heading */}
@@ -30,41 +31,34 @@ export default function Hero() {
               id="hero-heading"
               className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-white leading-tight mb-6"
             >
-              Remplissez vos bus.{" "}
-              <span className="text-orange-400">Maîtrisez vos colis.</span>{" "}
-              Pilotez vos recettes en temps réel.
+              {dict.h1_1}{" "}
+              <span className="text-orange-400">{dict.h1_2}</span>{" "}
+              {dict.h1_3}
             </h1>
 
             {/* Subtitle */}
             <p className="text-lg text-blue-100 mb-8 max-w-xl leading-relaxed">
-              Vos clients réservent depuis leur téléphone, vos colis sont tracés,
-              vos recettes sont visibles en temps réel.{" "}
-              <strong className="text-white">
-                Opérationnel en 48h, sans frais fixes, à votre image.
-              </strong>
+              {dict.subtitle}{" "}
+              <strong className="text-white">{dict.subtitleStrong}</strong>
             </p>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
               <DemoModal
-                triggerLabel="Je veux voir la démo →"
+                triggerLabel={dict.cta1}
                 triggerClassName="inline-flex items-center justify-center bg-orange-500 text-white px-7 py-3.5 rounded-xl font-semibold text-base hover:bg-orange-600 transition-all shadow-lg shadow-orange-900/30 cursor-pointer"
               />
               <a
                 href="#tarifs"
                 className="inline-flex items-center justify-center bg-white/10 text-white border border-white/20 px-7 py-3.5 rounded-xl font-semibold text-base hover:bg-white/20 transition-all backdrop-blur-sm"
               >
-                Voir les tarifs
+                {dict.cta2}
               </a>
             </div>
 
             {/* Trust indicators */}
             <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3">
-              {[
-                "Opérationnel en 48h",
-                "0 frais fixe, vous payez sur vos ventes",
-                "Plateforme à votre image",
-              ].map((item) => (
+              {dict.trust.map((item) => (
                 <div
                   key={item}
                   className="flex items-center gap-2 text-white/75 text-sm"
@@ -115,7 +109,7 @@ export default function Hero() {
                     </span>
                   </div>
                   <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-0.5 rounded-full">
-                    Actif
+                    {dict.mockupActive}
                   </span>
                 </div>
 
@@ -123,7 +117,7 @@ export default function Hero() {
                 <div className="bg-blue-50 rounded-xl p-3.5 mb-3">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-xs text-gray-500 mb-0.5">Départ</p>
+                      <p className="text-xs text-gray-500 mb-0.5">{dict.mockupDeparture}</p>
                       <p className="font-bold text-gray-900">Abidjan</p>
                       <p className="text-xs text-gray-500">08:00</p>
                     </div>
@@ -141,7 +135,7 @@ export default function Hero() {
                       />
                     </svg>
                     <div className="text-right">
-                      <p className="text-xs text-gray-500 mb-0.5">Arrivée</p>
+                      <p className="text-xs text-gray-500 mb-0.5">{dict.mockupArrival}</p>
                       <p className="font-bold text-gray-900">Bouaké</p>
                       <p className="text-xs text-gray-500">13:30</p>
                     </div>
@@ -151,7 +145,7 @@ export default function Hero() {
                 {/* Seats */}
                 <div className="mb-3">
                   <div className="flex justify-between text-xs text-gray-500 mb-1.5">
-                    <span>Places disponibles</span>
+                    <span>{dict.mockupSeats}</span>
                     <span className="font-medium text-gray-700">24 / 50</span>
                   </div>
                   <div className="w-full bg-gray-100 rounded-full h-1.5">
@@ -188,11 +182,9 @@ export default function Hero() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold text-gray-900">
-                      Billet #TF-2024-001
+                      {dict.mockupTicket}
                     </p>
-                    <p className="text-xs text-gray-500">
-                      Scanner à l&apos;embarquement
-                    </p>
+                    <p className="text-xs text-gray-500">{dict.mockupScan}</p>
                   </div>
                 </div>
               </div>
@@ -200,7 +192,7 @@ export default function Hero() {
               {/* Floating badge — commission */}
               <div className="absolute -top-5 -right-5 bg-orange-500 text-white rounded-xl px-4 py-2.5 shadow-xl shadow-orange-900/20">
                 <p className="text-xl font-bold leading-none">3%</p>
-                <p className="text-xs opacity-90 mt-0.5">Commission / billet</p>
+                <p className="text-xs opacity-90 mt-0.5">{dict.mockupCommission}</p>
               </div>
 
               {/* Floating badge — colis */}
@@ -223,9 +215,9 @@ export default function Hero() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold text-gray-900">
-                      Colis réservé
+                      {dict.mockupParcel}
                     </p>
-                    <p className="text-xs text-gray-500">Bouaké → Abidjan</p>
+                    <p className="text-xs text-gray-500">{dict.mockupParcelRoute}</p>
                   </div>
                 </div>
               </div>
@@ -236,7 +228,7 @@ export default function Hero() {
 
       {/* Scroll cue */}
       <div className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/40">
-        <span className="text-xs tracking-wide">Découvrir</span>
+        <span className="text-xs tracking-wide">{dict.scrollCue}</span>
         <div className="w-5 h-8 border-2 border-white/20 rounded-full flex items-start justify-center p-1">
           <div className="w-1 h-2 bg-white/50 rounded-full animate-bounce" />
         </div>

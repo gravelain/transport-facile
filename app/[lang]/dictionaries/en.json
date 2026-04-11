@@ -1,0 +1,529 @@
+{
+  "meta": {
+    "title": "Transport Facile – Online Ticketing for Bus Agencies in Côte d'Ivoire",
+    "description": "Transport Facile digitalises intercity transport agencies in Côte d'Ivoire. Online ticket sales, QR Code boarding, parcel management, real-time dashboard. Operational in 48h. Commission from 2.5%, zero fixed costs."
+  },
+  "nav": {
+    "solutions": "Our solutions",
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "demoCta": "Request a free demo"
+  },
+  "hero": {
+    "badge": "Built for transport agencies in Côte d'Ivoire",
+    "h1_1": "Fill your buses.",
+    "h1_2": "Track your parcels.",
+    "h1_3": "Manage your revenue in real time.",
+    "subtitle": "Your customers book from their phones, your parcels are tracked, your revenue is visible in real time.",
+    "subtitleStrong": "Operational in 48h, zero fixed costs, your brand.",
+    "cta1": "See the demo →",
+    "cta2": "View pricing",
+    "trust": ["Operational in 48h", "No fixed fee, you pay on sales", "Platform in your brand"],
+    "scrollCue": "Discover",
+    "mockupActive": "Active",
+    "mockupDeparture": "Departure",
+    "mockupArrival": "Arrival",
+    "mockupSeats": "Available seats",
+    "mockupScan": "Scan at boarding",
+    "mockupTicket": "Ticket #TF-2024-001",
+    "mockupCommission": "Commission / ticket",
+    "mockupParcel": "Parcel booked",
+    "mockupParcelRoute": "Bouaké → Abidjan"
+  },
+  "loss": {
+    "badge": "Field observations",
+    "title": "What most agencies experience, before they talk to us.",
+    "subtitle": "We hear this in every first conversation. These situations are not inevitable — each one has a concrete answer.",
+    "situations": [
+      {
+        "title": "Bookings limited to office hours",
+        "description": "A customer wanting to travel Monday calls Saturday evening. The counter is closed. They book elsewhere, or leave without a ticket. That window can't be recovered."
+      },
+      {
+        "title": "Parcel tracking by phone and paper ledger",
+        "description": "\"Do you have my parcel?\" Without digital tracking, every shipment generates calls for your staff and anxiety for your customer."
+      },
+      {
+        "title": "Revenue hard to reconcile at end of day",
+        "description": "Paper tickets, parcel revenue, credits, refunds. Reconciling all of this by hand leaves blind spots on what was actually collected."
+      }
+    ],
+    "bridgeText": "Each of these situations has a concrete answer,",
+    "bridgeHighlight": "operational in 48h",
+    "bridgeCta": "See our solutions"
+  },
+  "services": {
+    "badge": "Our solutions",
+    "title1": "Two tools that transform your agency",
+    "title2": "",
+    "subtitle": "Built for the Ivorian market. Deployed in your brand. Continuously updated.",
+    "items": [
+      {
+        "serviceBadge": "Tickets & Passengers",
+        "title": "ResaBus Core",
+        "subtitle": "Sell your tickets 24/7, even when your counter is closed",
+        "description": "No more customers turning away because your counter was full or closed. With ResaBus Core, your passengers book from their phones at any hour. Your team scans the ticket at boarding in 5 seconds. Your revenue is centralised in real time.",
+        "cta": "Learn more",
+        "features": [
+          "Online ticket sales 24/7, without a counter agent",
+          "Digital ticket sent to the customer within seconds",
+          "Fast QR Code scan at boarding: zero errors, zero fraud",
+          "Your daily revenue visible at a glance",
+          "Manage your routes, schedules and fares independently",
+          "Automatic SMS and email confirmations for your customers",
+          "Complete history: no more unclear end-of-day cash reports",
+          "Platform deployed in your agency's brand"
+        ],
+        "mockupBadge": "Digital ticket",
+        "mockupStatus": "Confirmed",
+        "mockupDeparture": "Departure",
+        "mockupDepartureCity": "Abidjan",
+        "mockupDepartureStation": "North Terminal · 08:00",
+        "mockupDuration": "5h30",
+        "mockupArrival": "Arrival",
+        "mockupArrivalCity": "Bouaké",
+        "mockupArrivalStation": "Central Terminal · 13:30",
+        "mockupSeat": "Seat",
+        "mockupSeatNumber": "14A",
+        "mockupRef": "Ref. TF-2025-4821"
+      },
+      {
+        "serviceBadge": "Parcels & Shipments",
+        "title": "ResaBus Colis Core",
+        "subtitle": "Turn your parcel service into a managed revenue stream",
+        "description": "Your customers queue with their parcels, your team juggles tickets and shipments, and parcel revenue remains unclear at the end of the day. ResaBus Colis Core organises everything: the customer books their slot online, you prepare the departure calmly, and every parcel is tracked from the agency to the recipient.",
+        "cta": "Learn more",
+        "features": [
+          "Online parcel slot booking, no more queues",
+          "Digital handling receipt with QR Code",
+          "Real-time tracking: the sender knows where their parcel is",
+          "Flexible pricing by weight and destination",
+          "Shipment history per customer to build loyalty",
+          "Automatic alerts on delivery",
+          "Dedicated dashboard for your parcel team",
+          "Works alongside ResaBus Core"
+        ],
+        "mockupBadge": "Parcel tracking",
+        "mockupStatus": "In transit",
+        "mockupSenderLabel": "Sender",
+        "mockupSender": "Adjamé · Abidjan",
+        "mockupRecipientLabel": "Recipient",
+        "mockupRecipient": "Bouaké",
+        "mockupWeight": "Weight: 4.5 kg",
+        "mockupPrice": "3,000 FCFA",
+        "mockupStep1": "Collected",
+        "mockupStep2": "In transit",
+        "mockupStep3": "Delivered"
+      }
+    ],
+    "comingLabel": "And that's not all. New modules are coming soon to cover even more of your agency's needs.",
+    "comingCta": "Stay informed →"
+  },
+  "trustBar": {
+    "badge": "Why our partners trust us",
+    "title": "Simple. Secure. Built for your reality.",
+    "usps": [
+      {
+        "title": "Extremely easy to use",
+        "description": "No IT knowledge required. If you can use WhatsApp, you can use our platform. Your agents and customers are up and running in under 10 minutes."
+      },
+      {
+        "title": "Your customers pay how they want",
+        "description": "Mobile Money, Wave, Orange Money, MTN MoMo, debit card, Stripe: your customers choose their preferred payment method. You collect without friction."
+      },
+      {
+        "title": "Zero fraud risk",
+        "description": "Every ticket is unique, secure and verifiable by QR Code. No more copied tickets, duplicates, or agents managing the till their own way."
+      },
+      {
+        "title": "Fast to deploy, easy to evolve",
+        "description": "Your agency is operational in 48h. And with every update, your platform improves automatically, with no service interruption and no extra cost."
+      }
+    ],
+    "paymentTitle": "Payment methods accepted by your platform",
+    "paymentMore": "+ more coming",
+    "paymentCaption": "Your customers pay with the method they use every day. You collect directly, securely."
+  },
+  "appPreview": {
+    "badge": "The platform in pictures",
+    "title1": "Simple for your customers.",
+    "title2": "Powerful for your agency.",
+    "subtitle": "Here is exactly what ResaBus looks like — on the passenger's mobile, and on the management dashboard.",
+    "clientLabel": "Customer view · Mobile",
+    "bookingTitle": "Ticket booking",
+    "bookingSubtitle": "Choose your journey",
+    "departure": "Departure",
+    "arrival": "Arrival",
+    "seatsLeft": "14 seats remaining",
+    "seatSelected": "Selected seat",
+    "seatNumber": "14A ✓",
+    "payCta": "Pay and receive my ticket →",
+    "qrTitle": "Ticket received",
+    "qrScan": "Scan at the station",
+    "clientCaption": "The customer books from their phone, pays with Wave or Orange Money, and receives their QR Code immediately.",
+    "agencyLabel": "Agency view · Dashboard",
+    "dashboardGreeting": "Good morning, Management 👋",
+    "dashboardTitle": "Dashboard · Today",
+    "onlineStatus": "● Online",
+    "kpis": [
+      { "label": "Tickets sold", "unit": "" },
+      { "label": "Today's revenue", "unit": "FCFA" },
+      { "label": "Load factor", "unit": "" }
+    ],
+    "chartLabel": "Sales by departure, this week",
+    "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Today"],
+    "bookingsTitle": "Latest bookings",
+    "statusConfirmed": "Confirmed",
+    "statusPending": "Pending",
+    "agencyCaption": "The agency manager tracks their revenue, departures and bookings in real time, from anywhere.",
+    "bottomText": "Want to see your agency in this dashboard?",
+    "bottomCta": "Request a personalised demo"
+  },
+  "howItWorks": {
+    "badge": "How it works",
+    "title": "Your agency online in 48h, hassle-free",
+    "subtitle": "We handle everything from A to Z. You focus on your business. Here is how it works.",
+    "steps": [
+      {
+        "title": "We talk, 30 minutes is enough",
+        "description": "A call or a WhatsApp message. In 30 minutes, we understand your agency, your routes, your departures, your challenges. No technical jargon, no endless forms. A real business conversation."
+      },
+      {
+        "title": "We configure your platform in your brand",
+        "description": "Your routes, your schedules, your fares, your colours, your logo. We set up your ResaBus space from A to Z. Your customers will see your modernised agency, not Transport Facile. The technology is ours, the platform is yours."
+      },
+      {
+        "title": "Your customers book. You collect.",
+        "description": "Within 48h of our first exchange, your agency is online. Your customers book their tickets and parcels from their phones. Your revenue is centralised and accessible at any time, from your office or your home."
+      }
+    ],
+    "cta": "I want to get started"
+  },
+  "pricing": {
+    "badge": "Pricing",
+    "title1": "No fixed costs. No risk.",
+    "title2": "We grow together.",
+    "subtitle": "No setup fee. No monthly subscription. A commission only on tickets sold online through your platform.",
+    "subtitleStrong": "If you don't sell, you pay nothing.",
+    "trialTitle": "Try the Pro plan free for 30 days.",
+    "trialSubtitle": "No payment details required. You evaluate the platform under your agency's real conditions, and you decide freely at the end of 30 days.",
+    "trialCta": "Start free trial →",
+    "commonTitle": "What you get from day one, whatever your plan",
+    "commonSubtitle": "These features are included for everyone, without exception.",
+    "commonFeatures": [
+      "Your agency online within 48h of our first exchange",
+      "Digital ticket with secure QR Code for boarding",
+      "Revenue dashboard, accessible at any time",
+      "Continuous updates, no interruption, no extra cost",
+      "Wave, Orange Money, MTN MoMo, Mobile Money, debit card",
+      "Counter staff training included from day one"
+    ],
+    "extrasLabel": "What you also get",
+    "lockedLabel": "Not included in this plan",
+    "plans": [
+      {
+        "name": "Essential",
+        "positioning": "To get started",
+        "tagline": "Online ticketing, without complexity.",
+        "price": "3%",
+        "retained": "You keep 97 FCFA for every 100 FCFA sold online.",
+        "priceSuffix": "commission per ticket sold online",
+        "priceNote": null,
+        "cta": "Start with Essential",
+        "extras": [
+          "Your customers book tickets online, at any hour",
+          "Manage your routes, schedules and fares independently",
+          "Your platform in your brand: logo, colours, agency name",
+          "Your customer receives their ticket by email, automatically",
+          "Email support, response within 24 business hours"
+        ],
+        "locked": [
+          "Online parcel and shipment management",
+          "SMS notifications for your customers",
+          "Monthly performance reports"
+        ]
+      },
+      {
+        "name": "Pro",
+        "positioning": "Most popular",
+        "tagline": "Tickets, parcels, revenue tracking. All in one place.",
+        "price": "2.5%",
+        "retained": "You keep 97.5 FCFA for every 100 FCFA sold online.",
+        "priceSuffix": "commission per ticket sold online",
+        "priceNote": "The lowest commission. The most complete platform.",
+        "cta": "Start free trial",
+        "extras": [
+          "Your customers book tickets online, at any hour",
+          "Online parcel booking, real-time tracking for the sender",
+          "QR Code boarding control: zero errors, zero fraud",
+          "Your customer receives their ticket and alerts by SMS and email",
+          "Dashboard and monthly performance reports",
+          "Your platform entirely in your brand",
+          "Priority support, response within 4h"
+        ],
+        "locked": []
+      },
+      {
+        "name": "Enterprise",
+        "positioning": "Custom",
+        "tagline": "For networks operating at scale.",
+        "price": "From 1.5%",
+        "retained": "The larger your network grows, the less commission you pay.",
+        "priceSuffix": "commission negotiated based on your volume",
+        "priceNote": null,
+        "cta": "Book a meeting",
+        "extras": [
+          "Early access to all new modules",
+          "Your own infrastructure, isolated and dedicated to your network",
+          "Dashboards and reports built to your specifications",
+          "A dedicated account manager",
+          "24/7 support",
+          "On-site team training",
+          "Service contract with platform uptime commitment"
+        ],
+        "locked": []
+      }
+    ],
+    "planBadge": "30 days free",
+    "reassurances": [
+      {
+        "title": "No commitment",
+        "desc": "Change plans or stop whenever you want. No notice period, no penalty."
+      },
+      {
+        "title": "We only earn when you earn",
+        "desc": "No fixed costs. Our commission applies only on real sales. Zero sales, zero cost."
+      },
+      {
+        "title": "Not sure which plan?",
+        "desc": "We'll advise you with no obligation.",
+        "link": "Describe your agency to us →"
+      }
+    ]
+  },
+  "simulator": {
+    "title": "Simulate your revenue",
+    "subtitle": "Enter your numbers, see what you earn each month.",
+    "ticketsLabel": "Tickets sold per day",
+    "ticketsUnit": "tickets",
+    "priceLabel": "Average ticket price",
+    "planLabel": "Choose your plan",
+    "netLabel": "Your net monthly revenue",
+    "netUnit": "k FCFA",
+    "netDay": "i.e.",
+    "netDayUnit": "per day",
+    "grossLabel": "Gross revenue/month",
+    "commissionLabel": "Transport Facile commission",
+    "encaisseLabel": "What you collect",
+    "proUpsell": "By switching to the Pro plan, you save",
+    "proUpsellSuffix": "in commission per month at this volume.",
+    "proConfirm": "You are on the best value-for-commission plan. The Pro plan also includes parcel management and automatic SMS.",
+    "disclaimer": "Indicative simulation based on online sales. Commission charged only on tickets sold through the platform."
+  },
+  "socialProof": {
+    "badge": "They digitised their agency",
+    "title": "What our partners say",
+    "subtitle": "Agency managers who chose digital. In their own words.",
+    "testimonials": [
+      {
+        "quote": "Before Transport Facile, I counted my tickets by hand at the end of the day. Now I see my revenue in real time from my phone. I save at least two hours a day, and my revenue has increased because customers book even at night.",
+        "name": "Koffi A.",
+        "role": "General Manager",
+        "agency": "Agence Fié Trans",
+        "lines": "Abidjan · Bouaké · Daloa",
+        "initial": "K",
+        "color": "bg-blue-700"
+      },
+      {
+        "quote": "My customers used to come from far away to book at the counter. Now they do it from home with Wave, and my buses leave on time with much less chaos. The queue has halved, and my agents are less stressed.",
+        "name": "Adjoua M.",
+        "role": "Manager",
+        "agency": "Express Bus CI",
+        "lines": "Abidjan · Yamoussoukro",
+        "initial": "A",
+        "color": "bg-orange-500"
+      },
+      {
+        "quote": "I was afraid it would be complicated for my agents. In one hour of training, everyone knew how to use the platform. In 48h, we were operational. What I had been waiting for for years.",
+        "name": "Yao B.",
+        "role": "Commercial Director",
+        "agency": "Trans Ivoir",
+        "lines": "Abidjan · San-Pédro · Gagnoa",
+        "initial": "Y",
+        "color": "bg-blue-900"
+      }
+    ],
+    "stats": [
+      { "value": "48h", "label": "Time to go live", "sub": "Contractually guaranteed" },
+      { "value": "0 FCFA", "label": "Fixed costs", "sub": "Commission on sales only" },
+      { "value": "6", "label": "Payment methods", "sub": "Wave, Orange Money, MTN, card…" },
+      { "value": "100%", "label": "White-label", "sub": "Your colours, your brand" }
+    ],
+    "bottomText": "Ready to join the agencies that are ahead of the curve?",
+    "bottomCta": "Become a partner"
+  },
+  "about": {
+    "badge": "About",
+    "title1": "We know your industry.",
+    "title2": "We built the tools it deserves.",
+    "p1": "Transport Facile was born from a simple observation: intercity transport in Côte d'Ivoire handles millions every day, and yet most agencies still operate with a notebook, a pen, and a lot of goodwill.",
+    "p2Start": "Our answer: powerful digital tools developed entirely in-house:",
+    "p2Product1": "ResaBus Core",
+    "p2Mid": "for ticketing and",
+    "p2Product2": "ResaBus Colis Core",
+    "p2End": "for shipments, deployed and personalised for each partner agency. And more modules are on the way.",
+    "p3Start": "We don't sell a generic application. We build",
+    "p3Strong": "your platform",
+    "p3End": ", with your colours, your rules, your identity. What your customers see is your agency, modernised.",
+    "cta1": "Become a partner",
+    "cta2": "See our solutions",
+    "values": [
+      {
+        "title": "Technology built for your market",
+        "description": "Our tools are designed for the realities of Ivorian transport: early morning departures, Abidjan–Bouaké routes, customers paying via Mobile Money or Wave, urgent parcels. Not an imported solution that doesn't understand your terrain."
+      },
+      {
+        "title": "Your image. Your brand. Your platform.",
+        "description": "Each partner agency gets its own platform: its name, its colours, its fares, its routes. Your customers don't see Transport Facile. They see your agency — modernised and professional. The technology is ours. The platform is yours."
+      },
+      {
+        "title": "A lasting relationship, not just a contract",
+        "description": "We don't hand you a tool and disappear. Your success is our success. We monitor your performance, update your platform, are available when you need help, and continuously develop new modules for your agency."
+      }
+    ],
+    "stats": [
+      { "value": "0 FCFA", "label": "fixed costs" },
+      { "value": "48h", "label": "to get started" },
+      { "value": "100%", "label": "in your brand" }
+    ]
+  },
+  "faq": {
+    "badge": "Frequently asked questions",
+    "title1": "You have questions.",
+    "title2": "Here are the real answers.",
+    "subtitle": "These questions come up in every first conversation. We answer them honestly, without jargon.",
+    "faqs": [
+      {
+        "q": "How exactly does commission-based payment work?",
+        "a": "You pay nothing upfront: no setup fee, no monthly subscription. Transport Facile takes only a commission on tickets sold online through your platform. If you sell 0 tickets, you pay 0 FCFA. The commission ranges from 2.5% (Pro plan) to 3% (Essential plan) of the ticket price. It is automatically deducted per transaction: you receive the rest directly."
+      },
+      {
+        "q": "Do my customers need a smartphone or internet?",
+        "a": "Your customers simply need a phone capable of receiving an SMS or WhatsApp message — even a basic phone is enough to receive the ticket. To book, they can also go through a family member with a smartphone. The platform is optimised for slow connections (3G, Edge) and small mobile screens."
+      },
+      {
+        "q": "What happens if the internet goes down at the station during boarding?",
+        "a": "Your agent can verify tickets in offline mode for a short period. Data is synchronised automatically as soon as the connection returns. As a last resort, the customer can show the confirmation SMS they received, which your agent verifies manually. We are also working on a full offline mode for areas with low network coverage."
+      },
+      {
+        "q": "How long does the setup actually take?",
+        "a": "In practice, your platform is configured and operational within 48h of our first exchange. Here is the process: Day 1, we configure your routes, schedules, fares and visual identity (logo, colours). Day 2, we train your team (1 hour is enough) and run a real test departure. Your customers can book from the next day. Counter staff training is included."
+      },
+      {
+        "q": "Do I keep my physical counter? Do my agents lose their jobs?",
+        "a": "Absolutely not. Transport Facile complements your counter — it does not replace it. Your agents continue selling tickets in person for customers who prefer to come in. The platform simplifies their work: no more manual counting, no more unclear end-of-day cash reports. Many partner agencies have found that their agents spend less time managing queues and more time serving customers well."
+      },
+      {
+        "q": "Who can see my revenue data? Is it confidential?",
+        "a": "Your data belongs to your agency, full stop. Transport Facile only accesses your revenue data when a declared technical need arises and with your agreement. We never share it with third parties. All data is encrypted in transit (HTTPS) and at rest. We apply data security best practices (agency-level isolation, restricted access)."
+      },
+      {
+        "q": "Can I manage multiple routes, multiple departures and multiple stations from a single interface?",
+        "a": "Yes, that is precisely one of the platform's strengths. You manage all your routes, all your schedules, all your fares from a single dashboard. You can create as many routes as needed (Abidjan–Bouaké, Abidjan–Man, Abidjan–San Pedro…), set different schedules by day, and update fares in real time. Enterprise agencies have an infrastructure entirely dedicated to their network."
+      },
+      {
+        "q": "What happens if a customer wants a refund or cancels their ticket?",
+        "a": "The refund policy is defined by your agency, not by Transport Facile. You retain full control over your terms and conditions. Our dashboard allows you to manage cancellations and refunds manually or automatically, according to the rules you define. The customer is automatically notified by SMS or WhatsApp as soon as the refund is processed."
+      }
+    ],
+    "bottomTitle": "Have another question?",
+    "bottomSubtitle": "We reply on WhatsApp within a few hours. No script, a real conversation.",
+    "bottomCta": "Ask my question on WhatsApp"
+  },
+  "contact": {
+    "badge": "Contact us",
+    "title": "Write to us. We reply fast.",
+    "subtitle": "Question about our plans, partnership project, or Enterprise enquiry: choose your topic in the form and we take it from there.",
+    "types": {
+      "question": {
+        "label": "I have a question",
+        "placeholder": "E.g.: I want to understand how parcel management works, or which plan fits my agency...",
+        "cta": "Send my question"
+      },
+      "partenariat": {
+        "label": "I want to become a partner",
+        "placeholder": "E.g.: Our agency runs Abidjan–Bouaké, 4 departures/day. We want to digitalise tickets and parcels...",
+        "cta": "Let's discuss our partnership"
+      },
+      "enterprise": {
+        "label": "Enterprise offer",
+        "placeholder": "E.g.: We operate 12 routes in Côte d'Ivoire and want a dedicated solution for our group...",
+        "cta": "Request a meeting"
+      }
+    },
+    "subjectLabel": "What is your topic?",
+    "nameLabel": "Your name",
+    "namePlaceholder": "Konan Didier",
+    "agencyLabel": "Your agency",
+    "agencyPlaceholder": "Agence Express CI",
+    "emailLabel": "Email",
+    "emailPlaceholder": "konan@agence.ci",
+    "phoneLabel": "WhatsApp",
+    "phonePlaceholder": "+225 07 XX XX XX XX",
+    "messageLabel": "Your message",
+    "responseTimePre": "Response within",
+    "responseTimeValue": "24 business hours",
+    "responseNote": "No jargon, no pressure. A real business conversation.",
+    "sending": "Sending…",
+    "privacy": "Your information is confidential and will never be shared.",
+    "successTitle": "Message received!",
+    "successDesc": "Our team will get back to you within 24 business hours. In the meantime, feel free to explore our pricing.",
+    "sendAnother": "Send another message",
+    "contactEmail": "Email",
+    "contactWhatsapp": "WhatsApp",
+    "contactWhatsappValue": "+33 6 52 94 53 83",
+    "contactLocation": "Location",
+    "contactLocationValue": "Abidjan, Côte d'Ivoire"
+  },
+  "footer": {
+    "description": "We equip Ivorian transport agencies to sell more, manage their parcels better, and track their revenue in real time.",
+    "location": "Based in Abidjan, Côte d'Ivoire",
+    "sections": {
+      "solutions": {
+        "title": "Solutions",
+        "links": [
+          { "label": "ResaBus Core", "href": "#services" },
+          { "label": "ResaBus Colis Core", "href": "#services" },
+          { "label": "How it works", "href": "#comment-ca-marche" },
+          { "label": "Pricing", "href": "#tarifs" }
+        ]
+      },
+      "entreprise": {
+        "title": "Company",
+        "links": [
+          { "label": "About", "href": "#a-propos" },
+          { "label": "FAQ", "href": "#faq" },
+          { "label": "Request a demo", "href": "#contact" },
+          { "label": "Contact", "href": "#contact" }
+        ]
+      },
+      "legal": {
+        "title": "Legal",
+        "links": [
+          { "label": "Legal notice", "href": "#" },
+          { "label": "Privacy policy", "href": "#" },
+          { "label": "Terms of service", "href": "#" }
+        ]
+      }
+    },
+    "copyright": "All rights reserved.",
+    "madeWith": "Made with passion in",
+    "country": "Côte d'Ivoire"
+  },
+  "whatsapp": {
+    "label": "Chat on WhatsApp",
+    "message": "Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20Transport%20Facile%20for%20my%20agency."
+  }
+}

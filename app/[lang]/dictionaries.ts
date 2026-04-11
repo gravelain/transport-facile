@@ -1,0 +1,20 @@
+import "server-only";
+import { cache } from "react";
+
+const dictionaries = {
+  fr: () =>
+    import("./dictionaries/fr.json").then((module) => module.default),
+  en: () =>
+    import("./dictionaries/en.json").then((module) => module.default),
+};
+
+export type Locale = keyof typeof dictionaries;
+
+export const locales: Locale[] = ["fr", "en"];
+
+export const hasLocale = (locale: string): locale is Locale =>
+  locale in dictionaries;
+
+export const getDictionary = cache(async (locale: Locale) =>
+  dictionaries[locale]()
+);
