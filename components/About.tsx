@@ -28,7 +28,7 @@ const values = [
   {
     title: "Votre image. Votre marque. Votre plateforme.",
     description:
-      "Chaque agence partenaire obtient sa propre plateforme — avec son nom, ses couleurs, ses tarifs, ses lignes. Vos clients ne voient pas Transport Facile. Ils voient votre agence, modernisée et professionnelle. La technologie est la nôtre. La plateforme est la vôtre.",
+      "Chaque agence partenaire obtient sa propre plateforme : son nom, ses couleurs, ses tarifs, ses lignes. Vos clients ne voient pas Transport Facile. Ils voient votre agence, modernisée et professionnelle. La technologie est la nôtre. La plateforme est la vôtre.",
     icon: (
       <svg
         className="w-5 h-5"
@@ -46,9 +46,9 @@ const values = [
     ),
   },
   {
-    title: "Une relation dans la durée — pas juste un contrat",
+    title: "Une relation dans la durée, pas juste un contrat",
     description:
-      "On ne vous livre pas un outil et on disparaît. Votre succès, c'est notre succès. On suit vos performances, on met à jour votre plateforme, on est disponibles quand vous avez besoin d'aide — et on développe sans cesse de nouveaux modules pour votre agence.",
+      "On ne vous livre pas un outil et on disparaît. Votre succès, c'est notre succès. On suit vos performances, on met à jour votre plateforme, on est disponibles quand vous avez besoin d'aide, et on développe sans cesse de nouveaux modules pour votre agence.",
     icon: (
       <svg
         className="w-5 h-5"
@@ -91,24 +91,24 @@ export default function About() {
             </h2>
             <p className="text-gray-600 leading-relaxed mb-5">
               Transport Facile est né d&apos;un constat simple : le transport
-              interurbain ivoirien brasse des millions chaque jour — et pourtant,
+              interurbain ivoirien brasse des millions chaque jour, et pourtant,
               la plupart des agences fonctionnent encore avec un carnet, un stylo,
               et beaucoup de bonne volonté.
             </p>
             <p className="text-gray-600 leading-relaxed mb-5">
               Notre réponse : des outils numériques puissants développés
-              entièrement en interne —{" "}
+              entièrement en interne :{" "}
               <strong className="text-gray-900">ResaBus Core</strong> pour la
               billetterie et{" "}
               <strong className="text-gray-900">ResaBus Colis Core</strong> pour
-              les expéditions — déployés et personnalisés pour chaque agence
+              les expéditions, déployés et personnalisés pour chaque agence
               partenaire. Et d&apos;autres modules arrivent.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Nous ne vendons pas une application générique. Nous construisons{" "}
               <strong className="text-gray-900">votre plateforme</strong>, avec
               vos couleurs, vos règles, votre identité. Ce que vos clients
-              verront, c&apos;est votre agence — modernisée.
+              verront, c&apos;est votre agence, modernisée.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -149,16 +149,16 @@ export default function About() {
             ))}
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 mt-6">
+            <div className="grid grid-cols-3 gap-3 mt-6">
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="bg-blue-50 rounded-xl p-4 text-center"
+                  className="bg-blue-50 rounded-xl p-3 sm:p-4 text-center"
                 >
-                  <p className="text-xl font-bold text-blue-700 leading-tight">
+                  <p className="text-lg sm:text-xl font-bold text-blue-700 leading-tight">
                     {stat.value}
                   </p>
-                  <p className="text-xs text-gray-600 mt-1">{stat.label}</p>
+                  <p className="text-xs text-gray-600 mt-1 leading-tight">{stat.label}</p>
                 </div>
               ))}
             </div>

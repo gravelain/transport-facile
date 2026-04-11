@@ -49,8 +49,8 @@ const typeConfig: Record<
 const contactInfo = [
   {
     label: "Email",
-    value: "contact@transport-facile.ci",
-    href: "mailto:contact@transport-facile.ci",
+    value: "contact@transport-facile.com",
+    href: "mailto:contact@transport-facile.com",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -122,7 +122,7 @@ export default function Contact() {
               Écrivez-nous. On vous répond vite.
             </h2>
             <p className="text-blue-200 leading-relaxed mb-10 max-w-sm">
-              Question sur nos offres, projet de partenariat, ou demande Enterprise — choisissez votre sujet dans le formulaire et on prend la main.
+              Question sur nos offres, projet de partenariat, ou demande Enterprise : choisissez votre sujet dans le formulaire et on prend la main.
             </p>
 
             {/* Contact details */}
@@ -165,7 +165,7 @@ export default function Contact() {
               <p className="text-blue-200 text-sm leading-relaxed">
                 Réponse sous{" "}
                 <strong className="text-white">24 heures ouvrées</strong>.
-                Pas de jargon, pas de pression — une vraie conversation métier.
+                Pas de jargon, pas de pression. Une vraie conversation métier.
               </p>
             </div>
           </div>
@@ -203,7 +203,7 @@ export default function Contact() {
                   <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2.5">
                     Quel est votre sujet ?
                   </p>
-                  <div className="grid grid-cols-3 gap-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                     {(Object.entries(typeConfig) as [RequestType, typeof typeConfig[RequestType]][]).map(
                       ([key, config]) => (
                         <button

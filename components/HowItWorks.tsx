@@ -1,7 +1,7 @@
 const steps = [
   {
     number: "01",
-    title: "On se parle — 30 minutes suffisent",
+    title: "On se parle, 30 minutes suffisent",
     description:
       "Un appel ou un message WhatsApp. En 30 minutes, on comprend votre agence, vos lignes, vos départs, vos défis. Pas de jargon technique, pas de formulaires interminables. Une vraie conversation métier.",
     icon: (
@@ -24,7 +24,7 @@ const steps = [
     number: "02",
     title: "On configure votre plateforme à votre image",
     description:
-      "Vos lignes, vos horaires, vos tarifs, vos couleurs, votre logo. Nous paramétrons votre espace ResaBus de A à Z. Vos clients verront votre agence — modernisée — pas Transport Facile. La technologie est la nôtre, la plateforme est la vôtre.",
+      "Vos lignes, vos horaires, vos tarifs, vos couleurs, votre logo. Nous paramétrons votre espace ResaBus de A à Z. Vos clients verront votre agence modernisée, pas Transport Facile. La technologie est la nôtre, la plateforme est la vôtre.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -51,7 +51,7 @@ const steps = [
     number: "03",
     title: "Vos clients réservent. Vous encaissez.",
     description:
-      "En moins de 48h, votre agence est en ligne. Vos clients réservent leurs billets et leurs colis depuis leur téléphone. Vos recettes sont centralisées et consultables à tout moment — depuis votre bureau ou votre domicile.",
+      "En 48h à partir de notre premier échange, votre agence est en ligne. Vos clients réservent leurs billets et leurs colis depuis leur téléphone. Vos recettes sont centralisées et consultables à tout moment, depuis votre bureau ou votre domicile.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -72,15 +72,15 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-20 lg:py-28 bg-blue-50">
+    <section id="comment-ca-marche" className="py-20 lg:py-28 bg-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <span className="text-orange-500 font-semibold text-sm uppercase tracking-wider">
             Comment ça marche
           </span>
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
-            Votre agence en ligne en 48h — sans prise de tête
+            Votre agence en ligne en 48h, sans prise de tête
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-xl mx-auto">
             Nous gérons tout de A à Z. Vous, vous vous concentrez sur votre

@@ -28,7 +28,7 @@ const usps = [
     ),
     title: "Vos clients paient comme ils veulent",
     description:
-      "Mobile Money, Wave, Orange Money, MTN MoMo, carte bancaire, Stripe — vos clients choisissent leur mode de paiement préféré. Vous, vous encaissez sans friction.",
+      "Mobile Money, Wave, Orange Money, MTN MoMo, carte bancaire, Stripe : vos clients choisissent leur mode de paiement préféré. Vous, vous encaissez sans friction.",
   },
   {
     icon: (
@@ -50,7 +50,7 @@ const usps = [
     ),
     title: "Rapide à déployer, facile à faire évoluer",
     description:
-      "Votre agence est opérationnelle en 48h. Et à chaque mise à jour, votre plateforme s'améliore automatiquement — sans interruption de service, sans coût supplémentaire.",
+      "Votre agence est opérationnelle en 48h. Et à chaque mise à jour, votre plateforme s'améliore automatiquement, sans interruption de service, sans coût supplémentaire.",
   },
 ];
 
@@ -69,7 +69,7 @@ export default function TrustBar() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 mb-14">
           {usps.map((usp) => (
             <div
               key={usp.title}

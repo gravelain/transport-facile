@@ -36,17 +36,12 @@ export default function Hero() {
             </h1>
 
             {/* Subtitle */}
-            {/* <p className="text-lg text-blue-100 mb-8 max-w-xl leading-relaxed">
-              Vos concurrents vendent encore au guichet.{" "}
-              <strong className="text-white">
-                Transport Facile vous donne une longueur d&apos;avance
-              </strong>{" "}
-              — avec une plateforme numérique complète, déployée aux couleurs
-              de votre agence, sans aucun investissement initial.
-            </p> */}
             <p className="text-lg text-blue-100 mb-8 max-w-xl leading-relaxed">
-              Augmentez vos ventes et simplifiez la réservation en ligne
-              Transport Facile rend votre agence digitale, rapidement.
+              Vos clients réservent depuis leur téléphone, vos colis sont tracés,
+              vos recettes sont visibles en temps réel.{" "}
+              <strong className="text-white">
+                Opérationnel en 48h, sans frais fixes, à votre image.
+              </strong>
             </p>
 
             {/* CTAs */}
@@ -67,7 +62,7 @@ export default function Hero() {
             <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3">
               {[
                 "Opérationnel en 48h",
-                "0 frais fixe — vous payez sur vos ventes",
+                "0 frais fixe, vous payez sur vos ventes",
                 "Plateforme à votre image",
               ].map((item) => (
                 <div

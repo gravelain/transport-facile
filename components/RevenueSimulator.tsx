@@ -7,10 +7,14 @@ const PLANS = [
   { name: "Pro", rate: 0.025, label: "2,5%" },
 ];
 
-function formatFCFA(n: number): string {
+function formatNum(n: number): string {
   return Math.round(n)
-    .toLocaleString("fr-FR")
-    .replace(/\s/g, "\u202F") + "\u00A0FCFA";
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, "\u202F");
+}
+
+function formatFCFA(n: number): string {
+  return formatNum(n) + "\u00A0FCFA";
 }
 
 export default function RevenueSimulator() {
@@ -41,7 +45,7 @@ export default function RevenueSimulator() {
           </div>
           <div>
             <p className="text-white font-bold text-base leading-tight">Simulez vos recettes</p>
-            <p className="text-blue-200 text-xs mt-0.5">Entrez vos chiffres — voyez ce que vous gagnez chaque mois.</p>
+            <p className="text-blue-200 text-xs mt-0.5">Entrez vos chiffres, voyez ce que vous gagnez chaque mois.</p>
           </div>
         </div>
       </div>
@@ -79,7 +83,7 @@ export default function RevenueSimulator() {
             <div className="flex items-center justify-between mb-2">
               <label className="text-sm font-semibold text-gray-700">Prix moyen par billet</label>
               <span className="text-sm font-bold text-blue-700 bg-blue-50 px-3 py-0.5 rounded-full">
-                {prix.toLocaleString("fr-FR")} FCFA
+                {formatNum(prix)}&nbsp;FCFA
               </span>
             </div>
             <input
@@ -128,7 +132,7 @@ export default function RevenueSimulator() {
           <div className="text-center">
             <p className="text-xs text-gray-500 mb-1">Votre revenu mensuel net</p>
             <p className="text-4xl font-extrabold text-gray-900 leading-none">
-              {Math.round(netMonthly / 1000).toLocaleString("fr-FR")}{" "}
+              {formatNum(Math.round(netMonthly / 1000))}{" "}
               <span className="text-2xl text-gray-500 font-bold">k FCFA</span>
             </p>
             <p className="text-xs text-gray-400 mt-1">

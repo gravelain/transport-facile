@@ -1,15 +1,16 @@
 import Link from "next/link";
 
 const footerLinks = {
-  Services: [
+  Solutions: [
     { label: "ResaBus Core", href: "#services" },
     { label: "ResaBus Colis Core", href: "#services" },
+    { label: "Comment ça marche", href: "#comment-ca-marche" },
     { label: "Nos tarifs", href: "#tarifs" },
-    { label: "Demander une démo", href: "#contact" },
   ],
   Entreprise: [
     { label: "À propos", href: "#a-propos" },
-    { label: "Notre vision", href: "#a-propos" },
+    { label: "FAQ", href: "#faq" },
+    { label: "Demander une démo", href: "#contact" },
     { label: "Contact", href: "#contact" },
   ],
   Légal: [
@@ -23,9 +24,9 @@ export default function Footer() {
   return (
     <footer className="bg-gray-950 text-gray-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-10">
           {/* Brand */}
-          <div className="lg:col-span-2">
+          <div className="md:col-span-4 lg:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-4">
               <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                 <svg

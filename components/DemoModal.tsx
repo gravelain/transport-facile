@@ -122,7 +122,7 @@ export default function DemoModal({
                       Voyez Transport Facile en action
                     </h2>
                     <p className="text-gray-500 text-sm mt-2 leading-relaxed">
-                      30 minutes — en visio ou en présentiel à Abidjan. On vous montre exactement ce que ça donne pour votre agence. Aucune obligation.
+                      30 minutes, en visio ou en présentiel à Abidjan. On vous montre exactement ce que ça donne pour votre agence. Aucune obligation.
                     </p>
                   </div>
 

@@ -3,18 +3,18 @@ const services = [
     id: "resabus-core",
     badge: "Billets & Voyageurs",
     title: "ResaBus Core",
-    subtitle: "Vendez vos billets 24h/24 — même quand votre guichet est fermé",
+    subtitle: "Vendez vos billets 24h/24, même quand votre guichet est fermé",
     description:
       "Fini les clients qui repartent parce que votre guichet était bondé ou fermé. Avec ResaBus Core, vos voyageurs réservent depuis leur téléphone à n'importe quelle heure. Votre équipe scanne le billet à l'embarquement en 5 secondes. Vos recettes, elles, sont centralisées en temps réel.",
     color: "blue" as const,
     features: [
-      "Vente de billets en ligne 24h/24, 7j/7 — sans guichetier",
+      "Vente de billets en ligne 24h/24, 7j/7, sans guichetier",
       "Billet numérique envoyé au client en quelques secondes",
-      "Scan QR Code rapide à l'embarquement — 0 erreur, 0 fraude",
+      "Scan QR Code rapide à l'embarquement : 0 erreur, 0 fraude",
       "Vos recettes du jour visibles en un coup d'œil",
       "Gestion de vos lignes, horaires et tarifs en toute autonomie",
       "SMS et email de confirmation automatiques pour vos clients",
-      "Historique complet — fini les fins de caisse floues",
+      "Historique complet : fini les fins de caisse floues",
       "Plateforme déployée aux couleurs de votre agence",
     ],
     icon: (
@@ -43,11 +43,11 @@ const services = [
       "Vos clients font la queue avec leurs colis, votre équipe jongle entre billets et expéditions, et les recettes colis restent floues en fin de journée. ResaBus Colis Core organise tout : le client réserve son créneau en ligne, vous préparez le départ sereinement, et chaque colis est tracé de l'agence jusqu'au destinataire.",
     color: "orange" as const,
     features: [
-      "Réservation de créneaux colis en ligne — fini les files d'attente",
+      "Réservation de créneaux colis en ligne, fini les files d'attente",
       "Bon de prise en charge numérique avec QR Code",
-      "Suivi en temps réel — l'expéditeur sait où est son colis",
+      "Suivi en temps réel : l'expéditeur sait où est son colis",
       "Tarification flexible selon le poids et la destination",
-      "Historique des envois par client — fidélisez votre clientèle",
+      "Historique des envois par client pour fidéliser votre clientèle",
       "Alertes automatiques à la réception",
       "Tableau de bord dédié pour votre équipe colis",
       "Fonctionne de pair avec ResaBus Core",
@@ -88,65 +88,12 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Pain block */}
-        <div className="mb-14 bg-blue-50 rounded-2xl px-6 py-7 border border-blue-100">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-            {[
-              {
-                icon: (
-                  <svg className="w-5 h-5 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                ),
-                title: "Des clients perdus chaque jour",
-                text: "Votre guichet est fermé ou bondé — et vos clients partent chez le concurrent, faute de pouvoir réserver à l'avance.",
-              },
-              {
-                icon: (
-                  <svg className="w-5 h-5 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                  </svg>
-                ),
-                title: "Des colis sans traçabilité",
-                text: "Les expéditions de colis ne sont pas suivies, les recettes sont difficiles à vérifier, les litiges clients s'accumulent.",
-              },
-              {
-                icon: (
-                  <svg className="w-5 h-5 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                      d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                ),
-                title: "Des recettes impossibles à piloter",
-                text: "En fin de journée, vous comptez à la main. Impossible de savoir en temps réel ce que votre agence a réellement encaissé.",
-              },
-            ].map((pain) => (
-              <div key={pain.title} className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-white border border-blue-200 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
-                  {pain.icon}
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900 text-sm mb-1">{pain.title}</p>
-                  <p className="text-sm text-gray-600 leading-relaxed">{pain.text}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-6 pt-5 border-t border-blue-200">
-            <p className="text-blue-800 font-semibold text-base text-center">
-              Transport Facile règle exactement ces trois problèmes — et ce n&apos;est que le début.
-            </p>
-          </div>
-        </div>
-
         {/* Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {services.map((service) => (
             <div
               key={service.id}
-              className="relative rounded-2xl border border-gray-100 bg-white p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="relative rounded-2xl border border-gray-100 bg-white p-5 sm:p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               {/* Top color bar */}
               <div
@@ -245,7 +192,7 @@ export default function Services() {
                       <div>
                         <p className="text-xs text-gray-400 mb-0.5">Départ</p>
                         <p className="font-bold text-gray-900 text-sm">Abidjan</p>
-                        <p className="text-xs text-gray-500">Gare Nord — 08:00</p>
+                        <p className="text-xs text-gray-500">Gare Nord · 08:00</p>
                       </div>
                       <div className="flex flex-col items-center gap-1 px-2">
                         <div className="flex items-center gap-1">
@@ -258,7 +205,7 @@ export default function Services() {
                       <div className="text-right">
                         <p className="text-xs text-gray-400 mb-0.5">Arrivée</p>
                         <p className="font-bold text-gray-900 text-sm">Bouaké</p>
-                        <p className="text-xs text-gray-500">Gare centrale — 13:30</p>
+                        <p className="text-xs text-gray-500">Gare centrale · 13:30</p>
                       </div>
                     </div>
                   </div>

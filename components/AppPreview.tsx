@@ -26,7 +26,7 @@ export default function AppPreview() {
             <span className="text-blue-700">Puissant pour votre agence.</span>
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-xl mx-auto">
-            Voici exactement à quoi ressemble ResaBus — côté voyageur sur
+            Voici exactement à quoi ressemble ResaBus, côté voyageur sur
             mobile, et côté direction sur le tableau de bord.
           </p>
         </div>
@@ -134,8 +134,8 @@ export default function AppPreview() {
                 </div>
               </div>
 
-              {/* Floating QR badge */}
-              <div className="absolute -right-10 top-16 bg-white rounded-xl shadow-xl border border-gray-100 px-3 py-2.5 w-32">
+              {/* Floating QR badge - masqué sous sm pour éviter le débordement sur petits écrans */}
+              <div className="hidden sm:block absolute -right-12 top-16 bg-white rounded-xl shadow-xl border border-gray-100 px-3 py-2.5 w-32">
                 <p className="text-xs font-semibold text-gray-900 mb-1.5">Billet reçu</p>
                 <div className="w-10 h-10 bg-gray-900 rounded-lg p-1 mx-auto">
                   <svg viewBox="0 0 20 20" className="w-full h-full" fill="white">
@@ -179,7 +179,7 @@ export default function AppPreview() {
                   <div className="w-2.5 h-2.5 bg-green-500 rounded-full" />
                 </div>
                 <div className="flex-1 bg-gray-700 rounded-lg px-3 py-1 text-xs text-gray-400 text-center truncate">
-                  dashboard.resabus.ci · Agence Express CI
+                  dashboard.resabus.com · Agence Express CI
                 </div>
               </div>
 
@@ -222,7 +222,7 @@ export default function AppPreview() {
                 {/* Mini chart bar */}
                 <div className="mb-4 bg-gray-50 rounded-xl p-3">
                   <p className="text-xs font-semibold text-gray-500 mb-2">
-                    Ventes par départ — cette semaine
+                    Ventes par départ, cette semaine
                   </p>
                   <div className="flex items-end gap-1.5 h-10">
                     {[60, 75, 45, 90, 80, 95, 84].map((h, i) => (
@@ -288,7 +288,7 @@ export default function AppPreview() {
 
             <p className="mt-6 text-sm text-gray-500 text-center max-w-xs">
               Le directeur d&apos;agence suit ses recettes, ses départs et ses
-              réservations en temps réel — depuis n&apos;importe où.
+              réservations en temps réel, depuis n&apos;importe où.
             </p>
           </div>
         </div>

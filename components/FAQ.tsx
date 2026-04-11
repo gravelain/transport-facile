@@ -1,0 +1,170 @@
+"use client";
+
+import { useState } from "react";
+
+const faqs = [
+  {
+    q: "Comment fonctionne exactement le paiement par commission ?",
+    a: "Vous ne payez rien à l'avance : ni frais d'installation, ni abonnement mensuel. Transport Facile prélève uniquement une commission sur les billets vendus en ligne via votre plateforme. Si vous vendez 0 billet, vous payez 0 FCFA. La commission varie de 2,5% (plan Pro) à 3% (plan Essentiel) du prix du billet. Elle est automatiquement déduite à chaque transaction : vous recevez le reste directement.",
+  },
+  {
+    q: "Est-ce que mes clients ont besoin d'un smartphone ou d'internet ?",
+    a: "Vos clients ont simplement besoin d'un téléphone capable de recevoir un SMS ou un message WhatsApp, même un téléphone basique suffit pour recevoir le billet. Pour réserver, ils peuvent aussi passer par un proche avec un smartphone. La plateforme est optimisée pour les connexions lentes (3G, Edge) et les petits écrans mobiles.",
+  },
+  {
+    q: "Que se passe-t-il si internet tombe en gare au moment de l'embarquement ?",
+    a: "Votre agent peut vérifier les billets en mode hors-ligne pendant une courte période. Les données sont synchronisées automatiquement dès que la connexion revient. En dernier recours, le client peut présenter le SMS de confirmation reçu, que votre agent vérifie manuellement. Nous travaillons aussi sur un mode hors-ligne complet pour les zones à faible couverture réseau.",
+  },
+  {
+    q: "Combien de temps prend réellement la mise en place ?",
+    a: "En pratique, votre plateforme est configurée et opérationnelle en 48h à partir de notre premier échange. Voici le déroulé : Jour 1, on paramètre vos lignes, horaires, tarifs et votre identité visuelle (logo, couleurs). Jour 2, on forme votre équipe (1h suffit) et on effectue un test de départ réel. Vos clients peuvent réserver dès le lendemain. La formation de votre équipe guichet est incluse.",
+  },
+  {
+    q: "Est-ce que je garde mon guichet physique ? Mes agents perdent-ils leur travail ?",
+    a: "Absolument pas. Transport Facile complète votre guichet, il ne le remplace pas. Vos agents continuent à vendre des billets physiquement pour les clients qui préfèrent se déplacer. La plateforme leur simplifie le travail : plus de comptage manuel, plus de fin de caisse floue. Beaucoup d'agences partenaires ont constaté que leurs agents passent moins de temps sur les files et plus de temps à bien servir les clients.",
+  },
+  {
+    q: "Qui voit mes données de recettes ? Sont-elles confidentielles ?",
+    a: "Vos données appartiennent à votre agence, point. Transport Facile n'accède à vos données de recettes qu'en cas de besoin technique déclaré et avec votre accord. Nous ne les partageons jamais avec des tiers. Toutes les données sont chiffrées en transit (HTTPS) et au repos. Nous appliquons les bonnes pratiques de sécurité des données (isolation par agence, accès restreint).",
+  },
+  {
+    q: "Puis-je gérer plusieurs lignes, plusieurs départs et plusieurs gares depuis une seule interface ?",
+    a: "Oui, c'est précisément l'un des atouts de la plateforme. Vous gérez toutes vos lignes, tous vos horaires, tous vos tarifs depuis un tableau de bord unique. Vous pouvez créer autant de lignes que nécessaire (Abidjan–Bouaké, Abidjan–Man, Abidjan–San Pedro…), définir des horaires différents par jour, et modifier les tarifs en temps réel. Les agences Enterprise disposent d'une infrastructure entièrement dédiée à leur réseau.",
+  },
+  {
+    q: "Que se passe-t-il si un client veut un remboursement ou annule son billet ?",
+    a: "La politique de remboursement est définie par votre agence, pas par Transport Facile. Vous gardez le contrôle total sur vos conditions. Notre tableau de bord vous permet de gérer les annulations et les remboursements manuellement ou automatiquement, selon les règles que vous définissez. Le client est notifié automatiquement par SMS ou WhatsApp dès que le remboursement est traité.",
+  },
+];
+
+// Schéma FAQPage pour Google (rich snippets "People also ask")
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.a,
+    },
+  })),
+};
+
+export default function FAQ() {
+  const [open, setOpen] = useState<number | null>(null);
+
+  return (
+    <section id="faq" className="py-20 lg:py-28 bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-14">
+          <span className="text-orange-500 font-semibold text-sm uppercase tracking-wider">
+            Questions fréquentes
+          </span>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+            Vous avez des questions.{" "}
+            <span className="text-blue-700">Voici les vraies réponses.</span>
+          </h2>
+          <p className="mt-4 text-lg text-gray-600 max-w-xl mx-auto">
+            Ces questions reviennent à chaque première conversation. On y répond
+            franchement, sans jargon.
+          </p>
+        </div>
+
+        {/* Items */}
+        <div className="space-y-3">
+          {faqs.map((faq, i) => {
+            const isOpen = open === i;
+            return (
+              <div
+                key={i}
+                className={`rounded-2xl border transition-all duration-200 ${
+                  isOpen
+                    ? "border-blue-200 bg-blue-50/60 shadow-sm"
+                    : "border-gray-200 bg-white hover:border-gray-300"
+                }`}
+              >
+                <button
+                  className="w-full flex items-start justify-between gap-4 px-6 py-5 text-left"
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                >
+                  <span
+                    className={`font-semibold text-sm sm:text-base leading-snug ${
+                      isOpen ? "text-blue-700" : "text-gray-900"
+                    }`}
+                  >
+                    {faq.q}
+                  </span>
+                  <div
+                    className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all ${
+                      isOpen
+                        ? "bg-blue-700 text-white rotate-180"
+                        : "bg-gray-100 text-gray-500"
+                    }`}
+                  >
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </div>
+                </button>
+
+                {isOpen && (
+                  <div className="px-6 pb-6">
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {faq.a}
+                    </p>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-12 bg-blue-700 rounded-2xl px-5 sm:px-8 py-7 sm:py-8 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
+          <div>
+            <p className="font-bold text-white text-lg">
+              Vous avez une autre question ?
+            </p>
+            <p className="text-blue-200 text-sm mt-1">
+              On répond sur WhatsApp en moins de quelques heures. Pas de
+              script, une vraie conversation.
+            </p>
+          </div>
+          <a
+            href="https://wa.me/2250700000000?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20Transport%20Facile"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whitespace-nowrap flex-shrink-0 inline-flex items-center gap-2 bg-white text-blue-700 font-bold px-6 py-3 rounded-xl hover:bg-blue-50 transition-all shadow-lg"
+          >
+            <svg
+              className="w-5 h-5 text-green-600"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Poser ma question sur WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
