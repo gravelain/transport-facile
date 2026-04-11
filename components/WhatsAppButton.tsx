@@ -20,7 +20,7 @@ export default function WhatsAppButton() {
 
   return (
     <a
-      href="https://wa.me/2250700000000?text=Bonjour%2C%20je%20voudrais%20en%20savoir%20plus%20sur%20Transport%20Facile%20pour%20mon%20agence."
+      href="https://wa.me/33652945383?text=Bonjour%2C%20je%20voudrais%20en%20savoir%20plus%20sur%20Transport%20Facile%20pour%20mon%20agence."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Nous contacter sur WhatsApp"

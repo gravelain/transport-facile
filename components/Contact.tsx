@@ -60,8 +60,8 @@ const contactInfo = [
   },
   {
     label: "WhatsApp",
-    value: "+225 07 XX XX XX XX",
-    href: "https://wa.me/2250700000000",
+    value: "+33 6 52 94 53 83",
+    href: "https://wa.me/33652945383",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}

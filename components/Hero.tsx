@@ -235,7 +235,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll cue */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40">
+      <div className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/40">
         <span className="text-xs tracking-wide">Découvrir</span>
         <div className="w-5 h-8 border-2 border-white/20 rounded-full flex items-start justify-center p-1">
           <div className="w-1 h-2 bg-white/50 rounded-full animate-bounce" />

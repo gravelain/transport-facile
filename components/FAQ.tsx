@@ -149,7 +149,7 @@ export default function FAQ() {
             </p>
           </div>
           <a
-            href="https://wa.me/2250700000000?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20Transport%20Facile"
+            href="https://wa.me/33652945383?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20Transport%20Facile"
             target="_blank"
             rel="noopener noreferrer"
             className="whitespace-nowrap flex-shrink-0 inline-flex items-center gap-2 bg-white text-blue-700 font-bold px-6 py-3 rounded-xl hover:bg-blue-50 transition-all shadow-lg"
