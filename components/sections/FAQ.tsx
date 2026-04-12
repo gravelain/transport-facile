@@ -1,15 +1,15 @@
-"use client";
+import type { Dictionary } from "@/context/DictionaryContext";
+import FAQItem from "@/components/ui/FAQItem";
+import { WHATSAPP_NUMBER } from "@/lib/constants";
 
-import { useState } from "react";
-import { useDictionary } from "@/context/DictionaryContext";
+type Props = {
+  dict: Dictionary["faq"];
+  whatsappMessage: string;
+};
 
-export default function FAQ() {
-  const dict = useDictionary();
-  const { faqs, badge, title1, title2, subtitle, bottomTitle, bottomSubtitle, bottomCta } = dict.faq;
+export default function FAQ({ dict, whatsappMessage }: Props) {
+  const { faqs, badge, title1, title2, subtitle, bottomTitle, bottomSubtitle, bottomCta } = dict;
 
-  const [open, setOpen] = useState<number | null>(null);
-
-  // Schéma FAQPage pour Google (rich snippets "People also ask")
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -43,52 +43,11 @@ export default function FAQ() {
           <p className="mt-4 text-lg text-gray-600 max-w-xl mx-auto">{subtitle}</p>
         </div>
 
-        {/* Items */}
+        {/* Items — each manages its own open/closed state client-side */}
         <div className="space-y-3">
-          {faqs.map((faq, i) => {
-            const isOpen = open === i;
-            return (
-              <div
-                key={i}
-                className={`rounded-2xl border transition-all duration-200 ${
-                  isOpen
-                    ? "border-blue-200 bg-blue-50/60 shadow-sm"
-                    : "border-gray-200 bg-white hover:border-gray-300"
-                }`}
-              >
-                <button
-                  className="w-full flex items-start justify-between gap-4 px-6 py-5 text-left"
-                  onClick={() => setOpen(isOpen ? null : i)}
-                  aria-expanded={isOpen}
-                >
-                  <span
-                    className={`font-semibold text-sm sm:text-base leading-snug ${
-                      isOpen ? "text-blue-700" : "text-gray-900"
-                    }`}
-                  >
-                    {faq.q}
-                  </span>
-                  <div
-                    className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all ${
-                      isOpen
-                        ? "bg-blue-700 text-white rotate-180"
-                        : "bg-gray-100 text-gray-500"
-                    }`}
-                  >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
-                </button>
-
-                {isOpen && (
-                  <div className="px-6 pb-6">
-                    <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+          {faqs.map((faq, i) => (
+            <FAQItem key={i} q={faq.q} a={faq.a} />
+          ))}
         </div>
 
         {/* Bottom CTA */}
@@ -98,7 +57,7 @@ export default function FAQ() {
             <p className="text-blue-200 text-sm mt-1">{bottomSubtitle}</p>
           </div>
           <a
-            href={`https://wa.me/33652945383?text=${dict.whatsapp.message}`}
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`}
             target="_blank"
             rel="noopener noreferrer"
             className="whitespace-nowrap flex-shrink-0 inline-flex items-center gap-2 bg-white text-blue-700 font-bold px-6 py-3 rounded-xl hover:bg-blue-50 transition-all shadow-lg"

@@ -1,44 +1,21 @@
 import type { MetadataRoute } from "next";
+import { BASE_URL } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://transport-facile.com";
+  const base = BASE_URL;
 
   return [
     {
-      url: base,
+      url: `${base}/fr`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: `${base}/#services`,
+      url: `${base}/en`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 0.9,
-    },
-    {
-      url: `${base}/#tarifs`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${base}/#comment-ca-marche`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${base}/#a-propos`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${base}/#contact`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
     },
   ];
 }

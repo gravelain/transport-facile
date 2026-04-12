@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import DemoModal from "./DemoModal";
+import DemoModal from "@/components/ui/DemoModal";
 import Image from "next/image";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useDictionary } from "@/context/DictionaryContext";
@@ -80,43 +80,26 @@ export default function Header() {
             />
           </div>
 
-          {/* Mobile burger */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
-            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
-            aria-expanded={isOpen}
-          >
-            {isOpen ? (
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
-          </button>
+          {/* Mobile : language switcher compact + burger */}
+          <div className="flex items-center gap-2 md:hidden">
+            <LanguageSwitcher variant="bar" />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
+              aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+              aria-expanded={isOpen}
+            >
+              {isOpen ? (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu */}
@@ -132,8 +115,7 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            <div className="pt-3 pb-1 px-4 flex flex-col gap-3">
-              <LanguageSwitcher />
+            <div className="pt-3 pb-1 px-4">
               <DemoModal
                 triggerLabel={nav.demoCta}
                 triggerClassName="w-full text-center bg-orange-500 text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-orange-600 transition-colors cursor-pointer block"

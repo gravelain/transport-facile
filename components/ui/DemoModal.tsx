@@ -27,6 +27,7 @@ export default function DemoModal({
   const [form, setForm] = useState<DemoFormState>(initialState);
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -35,14 +36,29 @@ export default function DemoModal({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1000));
-    setLoading(false);
-    setSubmitted(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ formType: "demo", ...form }),
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error ?? "Erreur réseau");
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Une erreur est survenue");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleClose = () => {
     setIsOpen(false);
     setSubmitted(false);
+    setError(null);
     setForm(initialState);
   };
 
@@ -212,6 +228,12 @@ export default function DemoModal({
                         </>
                       )}
                     </button>
+
+                    {error && (
+                      <p className="text-sm text-red-600 text-center bg-red-50 rounded-lg px-4 py-2.5">
+                        {error}
+                      </p>
+                    )}
 
                     <p className="text-xs text-gray-400 text-center">
                       Gratuit · Sans engagement · 30 minutes chrono

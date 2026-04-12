@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useDictionary } from "@/context/DictionaryContext";
+import { WHATSAPP_NUMBER } from "@/lib/constants";
 
 export default function WhatsAppButton() {
   const dict = useDictionary();
@@ -22,7 +23,7 @@ export default function WhatsAppButton() {
 
   return (
     <a
-      href={`https://wa.me/33652945383?text=${dict.whatsapp.message}`}
+      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${dict.whatsapp.message}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Nous contacter sur WhatsApp"

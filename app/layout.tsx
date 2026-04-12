@@ -39,8 +39,12 @@ export const metadata: Metadata = {
   publisher: "Transport Facile",
   metadataBase: new URL("https://transport-facile.com"),
   alternates: {
-    canonical: "/",
-    languages: { "fr-CI": "/" },
+    canonical: "https://transport-facile.com/fr",
+    languages: {
+      "x-default": "https://transport-facile.com/fr",
+      fr: "https://transport-facile.com/fr",
+      en: "https://transport-facile.com/en",
+    },
   },
   openGraph: {
     title:

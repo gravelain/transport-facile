@@ -1,5 +1,5 @@
-import DemoModal from "./DemoModal";
-import RevenueSimulator from "./RevenueSimulator";
+import DemoModal from "@/components/ui/DemoModal";
+import RevenueSimulator from "@/components/ui/RevenueSimulator";
 import type { Dictionary } from "@/context/DictionaryContext";
 
 type Props = { dict: Dictionary["pricing"]; simulatorDict: Dictionary["simulator"] };

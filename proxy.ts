@@ -5,9 +5,8 @@ const locales = ["fr", "en"] as const;
 type Locale = (typeof locales)[number];
 const defaultLocale: Locale = "fr";
 
-function getLocale(request: NextRequest): Locale {
-  const acceptLanguage = request.headers.get("accept-language") || "";
-  if (acceptLanguage.includes("en")) return "en";
+function getLocale(_request: NextRequest): Locale {
+  // Always default to French — the user switches language manually via the switcher
   return defaultLocale;
 }
 

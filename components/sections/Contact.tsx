@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useDictionary } from "@/context/DictionaryContext";
+import { WHATSAPP_NUMBER } from "@/lib/constants";
 
 type RequestType = "question" | "partenariat" | "enterprise";
 
@@ -48,7 +49,7 @@ export default function Contact() {
     {
       label: d.contactWhatsapp,
       value: d.contactWhatsappValue,
-      href: "https://wa.me/33652945383",
+      href: `https://wa.me/${WHATSAPP_NUMBER}`,
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -74,6 +75,7 @@ export default function Contact() {
   const [form, setForm] = useState<FormState>(initialState);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -87,9 +89,23 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1000));
-    setLoading(false);
-    setSubmitted(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ formType: "contact", ...form }),
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error ?? "Erreur réseau");
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Une erreur est survenue");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const current = typeConfig[form.type];
@@ -285,6 +301,12 @@ export default function Contact() {
                     current.cta
                   )}
                 </button>
+
+                {error && (
+                  <p className="text-sm text-red-600 text-center bg-red-50 rounded-lg px-4 py-2.5">
+                    {error}
+                  </p>
+                )}
 
                 <p className="text-xs text-gray-400 text-center">{d.privacy}</p>
               </form>

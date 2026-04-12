@@ -53,12 +53,9 @@ Librairie conseillée : **Zod** (déjà souvent utilisé avec Next.js, validatio
 
 ## 2. Contenu à remplacer (placeholders)
 
-### 🔴 Numéro WhatsApp
+### ✅ Numéro WhatsApp
 
-- [ ] Remplacer `2250700000000` par le vrai numéro dans :
-  - `components/WhatsAppButton.tsx`
-  - `components/FAQ.tsx` (lien CTA bas de page)
-  - `components/Contact.tsx` (affichage + href)
+- [x] Numéro `+33 6 52 94 53 83` déjà en place dans `WhatsAppButton.tsx`, `FAQ.tsx`, `Contact.tsx`, `fr.json`, `en.json`
 
 ### 🔴 Témoignages
 
@@ -95,7 +92,20 @@ Librairie conseillée : **Zod** (déjà souvent utilisé avec Next.js, validatio
 
 ---
 
-## 4. SEO — Tâches restantes
+## 4. SEO
+
+### ✅ Implémenté
+
+- [x] **i18n complet** : dictionnaires `fr.json` / `en.json`, routing `/fr` et `/en`, `DictionaryProvider` + `useDictionary()`, tous les composants traduits
+- [x] **Langue par défaut en français** : `proxy.ts` redirige toujours vers `/fr` peu importe la langue du navigateur
+- [x] **Language switcher** : variant compact mobile (`bar`), desktop pill, switch sans rechargement
+- [x] **`generateMetadata` par locale** dans `app/[lang]/page.tsx` : title/description/OG/Twitter par locale (fr_CI / en_US)
+- [x] **Balises hreflang** (`x-default`, `fr`, `en`) générées via `alternates.languages` dans `generateMetadata`
+- [x] **Sitemap corrigé** : URLs `/fr` et `/en` réelles (plus d'ancres `#fragment` qui ne sont pas indexées)
+- [x] **JSON-LD** : `Organization`, `SoftwareApplication` dans le root layout ; `FAQPage` dans le composant FAQ
+- [x] **`robots` meta** : `index: true`, `follow: true`, directives Googlebot
+- [x] **`metadataBase`** configuré dans le root layout
+- [x] **`<html lang>`** dynamique selon la locale courante (via header `x-locale`)
 
 ### 🟠 Google Search Console
 
@@ -110,7 +120,7 @@ Librairie conseillée : **Zod** (déjà souvent utilisé avec Next.js, validatio
 
 ### 🟡 Images avec attributs `alt`
 
-- [ ] Auditer toutes les balises `<img>` et les composants `Image` (Next.js) pour s'assurer que chaque image a un `alt` descriptif en français
+- [ ] Auditer toutes les balises `<img>` et les composants `Image` (Next.js) pour s'assurer que chaque image a un `alt` descriptif
 
 ### 🟡 Balises meta `description` par page
 
@@ -254,9 +264,12 @@ Librairie conseillée : **Zod** (déjà souvent utilisé avec Next.js, validatio
 
 | Priorité | Tâche |
 |----------|-------|
+| ✅ | i18n FR/EN complet (dictionnaires, routing, composants traduits) |
+| ✅ | Langue par défaut français + language switcher responsive |
+| ✅ | SEO : hreflang, generateMetadata par locale, sitemap, JSON-LD, robots |
 | 🔴 | Brancher le formulaire de contact (vrai envoi email) |
 | 🔴 | Valider et sécuriser le formulaire (validation + honeypot + rate limit) |
-| 🔴 | Remplacer le numéro WhatsApp placeholder |
+| ✅ | Numéro WhatsApp `+33 6 52 94 53 83` déjà en place |
 | 🔴 | Remplacer les témoignages placeholder |
 | 🔴 | Créer les pages légales (Mentions légales, Politique de confidentialité) |
 | 🔴 | Configurer le domaine et les variables d'environnement en production |

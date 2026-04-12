@@ -1,4 +1,4 @@
-import DemoModal from "./DemoModal";
+import DemoModal from "@/components/ui/DemoModal";
 import type { Dictionary } from "@/context/DictionaryContext";
 
 type Props = { dict: Dictionary["hero"] };
