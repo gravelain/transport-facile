@@ -5,6 +5,21 @@
 
 ---
 
+## 0. Prototype Figma — Validation marché
+
+**3 fichiers Figma à créer (dans cet ordre) :**
+
+- [ ] **[`prototype-resabus-core.md`](./prototype-resabus-core.md)** — Prototype cliquable billetterie (8 pages, flux agent + direction + passager)
+- [ ] **[`prototype-resabus-colis-core.md`](./prototype-resabus-colis-core.md)** — Prototype cliquable colis (7 pages, flux enregistrement + suivi + notifications)
+- [ ] **[`schema-ecosysteme-transport-facile.md`](./schema-ecosysteme-transport-facile.md)** — Schéma écosystème (1 frame 1440×900, export PNG pour WhatsApp)
+
+**Suivi validation terrain :**
+- [ ] Conduire 5 rendez-vous terrain avec des directeurs d'agences à Abidjan
+- [ ] Mettre à jour les fichiers prototype après chaque retour terrain
+- [ ] Une fois 2-3 directeurs convaincus → lancer le MVP en priorisant les écrans validés
+
+---
+
 ## 1. Formulaire de contact — Fonctionnalité & Sécurité
 
 Le formulaire dans `components/Contact.tsx` affiche un faux "succès" après 1 seconde (`setTimeout`). Il n'envoie **aucun message nulle part**.

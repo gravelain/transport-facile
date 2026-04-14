@@ -1,14 +1,18 @@
 import Link from "next/link";
 import type { Dictionary } from "@/context/DictionaryContext";
 
-type Props = { dict: Dictionary["footer"] };
+type Props = { dict: Dictionary["footer"]; locale: string };
 
-export default function Footer({ dict }: Props) {
+export default function Footer({ dict, locale }: Props) {
   const sections = [
     dict.sections.solutions,
     dict.sections.entreprise,
     dict.sections.legal,
   ];
+
+  /** Rend les ancres #section locale-aware : /fr#contact */
+  const href = (raw: string) =>
+    raw.startsWith("#") && raw.length > 1 ? `/${locale}${raw}` : raw;
 
   return (
     <footer className="bg-gray-950 text-gray-400">
@@ -53,7 +57,7 @@ export default function Footer({ dict }: Props) {
                 {section.links.map((link) => (
                   <li key={link.label}>
                     <a
-                      href={link.href}
+                      href={href(link.href)}
                       className="text-sm hover:text-white transition-colors"
                     >
                       {link.label}

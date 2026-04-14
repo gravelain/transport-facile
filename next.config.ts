@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
   // Compression Gzip/Brotli automatique
   compress: true,
@@ -20,16 +22,21 @@ const nextConfig: NextConfig = {
           },
         ],
       },
-      {
-        // Cache long pour les assets statiques Next.js
-        source: "/_next/static/(.*)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
+      // En prod uniquement : cache long pour les assets statiques Next.js
+      // (en dev, ce header interfère avec le hot-reload Turbopack)
+      ...(isProd
+        ? [
+            {
+              source: "/_next/static/(.*)",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value: "public, max-age=31536000, immutable",
+                },
+              ],
+            },
+          ]
+        : []),
       {
         // Cache images
         source: "/images/(.*)",

@@ -39,17 +39,17 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5">
+          <Link href="/" aria-label="Transport Facile — Accueil" className="flex items-center gap-2.5">
             <div className="w-9 h-9 bg-blue-700 rounded-lg flex items-center justify-center flex-shrink-0">
               <Image
                 src="/logo/Design-sans-titre-_1_.svg"
-                alt="Logo"
-                width={0}
-                height={0}
-                className="w-5 h-auto invert brightness-0"
+                alt="Transport Facile"
+                width={20}
+                height={20}
+                className="w-5 h-5 invert brightness-0"
               />
             </div>
-            <div className="leading-none">
+            <div className="leading-none" aria-hidden="true">
               <span className="font-bold text-lg text-blue-700">Transport</span>
               <span className="font-bold text-lg text-orange-500"> Facile</span>
             </div>

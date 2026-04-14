@@ -111,9 +111,9 @@ export default function Contact() {
   const current = typeConfig[form.type];
 
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-blue-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-start">
+    <section id="contact" className="py-20 lg:py-28 bg-blue-900" suppressHydrationWarning>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" suppressHydrationWarning>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-start" suppressHydrationWarning>
 
           {/* ── Left ── */}
           <div>

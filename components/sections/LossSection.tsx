@@ -75,6 +75,7 @@ export default function LossSection({ dict }: Props) {
           >
             {dict.bridgeCta}
             <svg
+              aria-hidden="true"
               className="w-4 h-4 group-hover:translate-x-0.5 transition-transform"
               fill="none"
               stroke="currentColor"

@@ -80,7 +80,7 @@ export default async function LangPage({
   return (
     <>
       <Header />
-      <main>
+      <main suppressHydrationWarning>
         <Hero dict={dict.hero} />
         <LossSection dict={dict.loss} />
         <Services dict={dict.services} />
@@ -93,7 +93,7 @@ export default async function LangPage({
         <FAQ dict={dict.faq} whatsappMessage={dict.whatsapp.message} />
         <Contact />
       </main>
-      <Footer dict={dict.footer} />
+      <Footer dict={dict.footer} locale={locale} />
       <WhatsAppButton />
     </>
   );
